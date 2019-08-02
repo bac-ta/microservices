@@ -1,3 +1,27 @@
-message User{
+syntax = "proto3";
 
+package com.dimageshare.department.entity;
+import "google/protobuf/empty.proto";
+
+message User {
+    int32 id = 1;
+    string name = 2;
+    Sex sex = 3;
+    string email = 4;
+    int32 age = 5;
+    int32 departmentId = 6;
+}
+enum Sex {
+    MALE = 0;
+    FEMALE = 1;
+    OTHER = 2;
+}
+
+message UserRequest{
+    int32 id =1;
+}
+
+service UserService {
+    rpc fetchUsers (google.protobuf.Empty) returns (User);
+    rpc fetchUserById(UserRequest) returns(User);
 }
