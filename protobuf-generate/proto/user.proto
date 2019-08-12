@@ -1,7 +1,9 @@
 syntax = "proto3";
 
-package com.dimageshare.department.entity;
+package department;
 import "google/protobuf/empty.proto";
+option java_package = "demo.protobuf.core.autogen.grpc.user";
+option java_multiple_files = true;
 
 message User {
     int32 id = 1;
