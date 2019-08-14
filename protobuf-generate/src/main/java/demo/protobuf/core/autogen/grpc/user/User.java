@@ -18,9 +18,10 @@ private static final long serialVersionUID = 0L;
   private User() {
     id_ = 0;
     name_ = "";
-    sex_ = 0;
+    gender_ = 0;
     email_ = "";
     age_ = 0;
+    phoneNumber_ = "";
     departmentId_ = 0;
   }
 
@@ -69,7 +70,7 @@ private static final long serialVersionUID = 0L;
           case 24: {
             int rawValue = input.readEnum();
 
-            sex_ = rawValue;
+            gender_ = rawValue;
             break;
           }
           case 34: {
@@ -83,7 +84,13 @@ private static final long serialVersionUID = 0L;
             age_ = input.readInt32();
             break;
           }
-          case 48: {
+          case 50: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            phoneNumber_ = s;
+            break;
+          }
+          case 56: {
 
             departmentId_ = input.readInt32();
             break;
@@ -155,20 +162,20 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int SEX_FIELD_NUMBER = 3;
-  private int sex_;
+  public static final int GENDER_FIELD_NUMBER = 3;
+  private int gender_;
   /**
-   * <code>.user.Sex sex = 3;</code>
+   * <code>.user.Gender gender = 3;</code>
    */
-  public int getSexValue() {
-    return sex_;
+  public int getGenderValue() {
+    return gender_;
   }
   /**
-   * <code>.user.Sex sex = 3;</code>
+   * <code>.user.Gender gender = 3;</code>
    */
-  public demo.protobuf.core.autogen.grpc.user.Sex getSex() {
-    demo.protobuf.core.autogen.grpc.user.Sex result = demo.protobuf.core.autogen.grpc.user.Sex.valueOf(sex_);
-    return result == null ? demo.protobuf.core.autogen.grpc.user.Sex.UNRECOGNIZED : result;
+  public demo.protobuf.core.autogen.grpc.user.Gender getGender() {
+    demo.protobuf.core.autogen.grpc.user.Gender result = demo.protobuf.core.autogen.grpc.user.Gender.valueOf(gender_);
+    return result == null ? demo.protobuf.core.autogen.grpc.user.Gender.UNRECOGNIZED : result;
   }
 
   public static final int EMAIL_FIELD_NUMBER = 4;
@@ -214,10 +221,44 @@ private static final long serialVersionUID = 0L;
     return age_;
   }
 
-  public static final int DEPARTMENTID_FIELD_NUMBER = 6;
+  public static final int PHONENUMBER_FIELD_NUMBER = 6;
+  private volatile java.lang.Object phoneNumber_;
+  /**
+   * <code>string phoneNumber = 6;</code>
+   */
+  public java.lang.String getPhoneNumber() {
+    java.lang.Object ref = phoneNumber_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      phoneNumber_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string phoneNumber = 6;</code>
+   */
+  public com.google.protobuf.ByteString
+      getPhoneNumberBytes() {
+    java.lang.Object ref = phoneNumber_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      phoneNumber_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int DEPARTMENTID_FIELD_NUMBER = 7;
   private int departmentId_;
   /**
-   * <code>int32 departmentId = 6;</code>
+   * <code>int32 departmentId = 7;</code>
    */
   public int getDepartmentId() {
     return departmentId_;
@@ -241,8 +282,8 @@ private static final long serialVersionUID = 0L;
     if (!getNameBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
     }
-    if (sex_ != demo.protobuf.core.autogen.grpc.user.Sex.MALE.getNumber()) {
-      output.writeEnum(3, sex_);
+    if (gender_ != demo.protobuf.core.autogen.grpc.user.Gender.MALE.getNumber()) {
+      output.writeEnum(3, gender_);
     }
     if (!getEmailBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, email_);
@@ -250,8 +291,11 @@ private static final long serialVersionUID = 0L;
     if (age_ != 0) {
       output.writeInt32(5, age_);
     }
+    if (!getPhoneNumberBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, phoneNumber_);
+    }
     if (departmentId_ != 0) {
-      output.writeInt32(6, departmentId_);
+      output.writeInt32(7, departmentId_);
     }
     unknownFields.writeTo(output);
   }
@@ -268,9 +312,9 @@ private static final long serialVersionUID = 0L;
     if (!getNameBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
     }
-    if (sex_ != demo.protobuf.core.autogen.grpc.user.Sex.MALE.getNumber()) {
+    if (gender_ != demo.protobuf.core.autogen.grpc.user.Gender.MALE.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(3, sex_);
+        .computeEnumSize(3, gender_);
     }
     if (!getEmailBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, email_);
@@ -279,9 +323,12 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(5, age_);
     }
+    if (!getPhoneNumberBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, phoneNumber_);
+    }
     if (departmentId_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(6, departmentId_);
+        .computeInt32Size(7, departmentId_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -303,11 +350,13 @@ private static final long serialVersionUID = 0L;
         == other.getId());
     result = result && getName()
         .equals(other.getName());
-    result = result && sex_ == other.sex_;
+    result = result && gender_ == other.gender_;
     result = result && getEmail()
         .equals(other.getEmail());
     result = result && (getAge()
         == other.getAge());
+    result = result && getPhoneNumber()
+        .equals(other.getPhoneNumber());
     result = result && (getDepartmentId()
         == other.getDepartmentId());
     result = result && unknownFields.equals(other.unknownFields);
@@ -325,12 +374,14 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getId();
     hash = (37 * hash) + NAME_FIELD_NUMBER;
     hash = (53 * hash) + getName().hashCode();
-    hash = (37 * hash) + SEX_FIELD_NUMBER;
-    hash = (53 * hash) + sex_;
+    hash = (37 * hash) + GENDER_FIELD_NUMBER;
+    hash = (53 * hash) + gender_;
     hash = (37 * hash) + EMAIL_FIELD_NUMBER;
     hash = (53 * hash) + getEmail().hashCode();
     hash = (37 * hash) + AGE_FIELD_NUMBER;
     hash = (53 * hash) + getAge();
+    hash = (37 * hash) + PHONENUMBER_FIELD_NUMBER;
+    hash = (53 * hash) + getPhoneNumber().hashCode();
     hash = (37 * hash) + DEPARTMENTID_FIELD_NUMBER;
     hash = (53 * hash) + getDepartmentId();
     hash = (29 * hash) + unknownFields.hashCode();
@@ -466,11 +517,13 @@ private static final long serialVersionUID = 0L;
 
       name_ = "";
 
-      sex_ = 0;
+      gender_ = 0;
 
       email_ = "";
 
       age_ = 0;
+
+      phoneNumber_ = "";
 
       departmentId_ = 0;
 
@@ -498,9 +551,10 @@ private static final long serialVersionUID = 0L;
       demo.protobuf.core.autogen.grpc.user.User result = new demo.protobuf.core.autogen.grpc.user.User(this);
       result.id_ = id_;
       result.name_ = name_;
-      result.sex_ = sex_;
+      result.gender_ = gender_;
       result.email_ = email_;
       result.age_ = age_;
+      result.phoneNumber_ = phoneNumber_;
       result.departmentId_ = departmentId_;
       onBuilt();
       return result;
@@ -550,8 +604,8 @@ private static final long serialVersionUID = 0L;
         name_ = other.name_;
         onChanged();
       }
-      if (other.sex_ != 0) {
-        setSexValue(other.getSexValue());
+      if (other.gender_ != 0) {
+        setGenderValue(other.getGenderValue());
       }
       if (!other.getEmail().isEmpty()) {
         email_ = other.email_;
@@ -559,6 +613,10 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getAge() != 0) {
         setAge(other.getAge());
+      }
+      if (!other.getPhoneNumber().isEmpty()) {
+        phoneNumber_ = other.phoneNumber_;
+        onChanged();
       }
       if (other.getDepartmentId() != 0) {
         setDepartmentId(other.getDepartmentId());
@@ -685,46 +743,46 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int sex_ = 0;
+    private int gender_ = 0;
     /**
-     * <code>.user.Sex sex = 3;</code>
+     * <code>.user.Gender gender = 3;</code>
      */
-    public int getSexValue() {
-      return sex_;
+    public int getGenderValue() {
+      return gender_;
     }
     /**
-     * <code>.user.Sex sex = 3;</code>
+     * <code>.user.Gender gender = 3;</code>
      */
-    public Builder setSexValue(int value) {
-      sex_ = value;
+    public Builder setGenderValue(int value) {
+      gender_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>.user.Sex sex = 3;</code>
+     * <code>.user.Gender gender = 3;</code>
      */
-    public demo.protobuf.core.autogen.grpc.user.Sex getSex() {
-      demo.protobuf.core.autogen.grpc.user.Sex result = demo.protobuf.core.autogen.grpc.user.Sex.valueOf(sex_);
-      return result == null ? demo.protobuf.core.autogen.grpc.user.Sex.UNRECOGNIZED : result;
+    public demo.protobuf.core.autogen.grpc.user.Gender getGender() {
+      demo.protobuf.core.autogen.grpc.user.Gender result = demo.protobuf.core.autogen.grpc.user.Gender.valueOf(gender_);
+      return result == null ? demo.protobuf.core.autogen.grpc.user.Gender.UNRECOGNIZED : result;
     }
     /**
-     * <code>.user.Sex sex = 3;</code>
+     * <code>.user.Gender gender = 3;</code>
      */
-    public Builder setSex(demo.protobuf.core.autogen.grpc.user.Sex value) {
+    public Builder setGender(demo.protobuf.core.autogen.grpc.user.Gender value) {
       if (value == null) {
         throw new NullPointerException();
       }
       
-      sex_ = value.getNumber();
+      gender_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
-     * <code>.user.Sex sex = 3;</code>
+     * <code>.user.Gender gender = 3;</code>
      */
-    public Builder clearSex() {
+    public Builder clearGender() {
       
-      sex_ = 0;
+      gender_ = 0;
       onChanged();
       return this;
     }
@@ -824,15 +882,84 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private java.lang.Object phoneNumber_ = "";
+    /**
+     * <code>string phoneNumber = 6;</code>
+     */
+    public java.lang.String getPhoneNumber() {
+      java.lang.Object ref = phoneNumber_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        phoneNumber_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string phoneNumber = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPhoneNumberBytes() {
+      java.lang.Object ref = phoneNumber_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        phoneNumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string phoneNumber = 6;</code>
+     */
+    public Builder setPhoneNumber(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      phoneNumber_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string phoneNumber = 6;</code>
+     */
+    public Builder clearPhoneNumber() {
+      
+      phoneNumber_ = getDefaultInstance().getPhoneNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string phoneNumber = 6;</code>
+     */
+    public Builder setPhoneNumberBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      phoneNumber_ = value;
+      onChanged();
+      return this;
+    }
+
     private int departmentId_ ;
     /**
-     * <code>int32 departmentId = 6;</code>
+     * <code>int32 departmentId = 7;</code>
      */
     public int getDepartmentId() {
       return departmentId_;
     }
     /**
-     * <code>int32 departmentId = 6;</code>
+     * <code>int32 departmentId = 7;</code>
      */
     public Builder setDepartmentId(int value) {
       
@@ -841,7 +968,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>int32 departmentId = 6;</code>
+     * <code>int32 departmentId = 7;</code>
      */
     public Builder clearDepartmentId() {
       

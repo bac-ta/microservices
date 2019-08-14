@@ -8,30 +8,31 @@ option java_multiple_files = true;
 message User {
     int32 id = 1;
     string name = 2;
-    Sex sex = 3;
+    Gender gender = 3;
     string email = 4;
     int32 age = 5;
-    int32 departmentId = 6;
+    string phoneNumber = 6;
+    int32 departmentId = 7;
 }
-enum Sex {
+enum Gender {
     MALE = 0;
     FEMALE = 1;
     OTHER = 2;
 }
 
-message FetchUserByIdRequest{
-    int32 id =1;
+message FetchUserByIdRequest {
+    int32 id = 1;
 }
 
-message UserResponses{
-    repeated User user =1;
+message UserResponses {
+    repeated User user = 1;
 }
 
-message FetchUserByDepartmentIdRequest{
-    int32 departmentId =1;
+message FetchUserByDepartmentIdRequest {
+    int32 departmentId = 1;
 }
 service UserService {
     rpc fetchUsers (google.protobuf.Empty) returns (UserResponses);
-    rpc fetchUserById(FetchUserByIdRequest) returns(User);
-    rpc fetchUserByDepartmentId(FetchUserByDepartmentIdRequest) returns(UserResponses);
+    rpc fetchUserById (FetchUserByIdRequest) returns (User);
+    rpc fetchUserByDepartmentId (FetchUserByDepartmentIdRequest) returns (UserResponses);
 }

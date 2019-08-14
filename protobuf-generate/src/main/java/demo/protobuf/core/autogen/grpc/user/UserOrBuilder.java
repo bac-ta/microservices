@@ -23,13 +23,13 @@ public interface UserOrBuilder extends
       getNameBytes();
 
   /**
-   * <code>.user.Sex sex = 3;</code>
+   * <code>.user.Gender gender = 3;</code>
    */
-  int getSexValue();
+  int getGenderValue();
   /**
-   * <code>.user.Sex sex = 3;</code>
+   * <code>.user.Gender gender = 3;</code>
    */
-  demo.protobuf.core.autogen.grpc.user.Sex getSex();
+  demo.protobuf.core.autogen.grpc.user.Gender getGender();
 
   /**
    * <code>string email = 4;</code>
@@ -47,7 +47,17 @@ public interface UserOrBuilder extends
   int getAge();
 
   /**
-   * <code>int32 departmentId = 6;</code>
+   * <code>string phoneNumber = 6;</code>
+   */
+  java.lang.String getPhoneNumber();
+  /**
+   * <code>string phoneNumber = 6;</code>
+   */
+  com.google.protobuf.ByteString
+      getPhoneNumberBytes();
+
+  /**
+   * <code>int32 departmentId = 7;</code>
    */
   int getDepartmentId();
 }

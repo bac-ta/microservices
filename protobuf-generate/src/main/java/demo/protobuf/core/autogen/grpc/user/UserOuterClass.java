@@ -44,20 +44,21 @@ public final class UserOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\nuser.proto\022\004user\032\033google/protobuf/empt" +
-      "y.proto\"j\n\004User\022\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \001(" +
-      "\t\022\026\n\003sex\030\003 \001(\0162\t.user.Sex\022\r\n\005email\030\004 \001(\t" +
-      "\022\013\n\003age\030\005 \001(\005\022\024\n\014departmentId\030\006 \001(\005\"\"\n\024F" +
-      "etchUserByIdRequest\022\n\n\002id\030\001 \001(\005\")\n\rUserR" +
-      "esponses\022\030\n\004user\030\001 \003(\0132\n.user.User\"6\n\036Fe" +
-      "tchUserByDepartmentIdRequest\022\024\n\014departme" +
-      "ntId\030\001 \001(\005*&\n\003Sex\022\010\n\004MALE\020\000\022\n\n\006FEMALE\020\001\022" +
-      "\t\n\005OTHER\020\0022\327\001\n\013UserService\0229\n\nfetchUsers" +
-      "\022\026.google.protobuf.Empty\032\023.user.UserResp" +
-      "onses\0227\n\rfetchUserById\022\032.user.FetchUserB" +
-      "yIdRequest\032\n.user.User\022T\n\027fetchUserByDep" +
-      "artmentId\022$.user.FetchUserByDepartmentId" +
-      "Request\032\023.user.UserResponsesB(\n$demo.pro" +
-      "tobuf.core.autogen.grpc.userP\001b\006proto3"
+      "y.proto\"\205\001\n\004User\022\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \001" +
+      "(\t\022\034\n\006gender\030\003 \001(\0162\014.user.Gender\022\r\n\005emai" +
+      "l\030\004 \001(\t\022\013\n\003age\030\005 \001(\005\022\023\n\013phoneNumber\030\006 \001(" +
+      "\t\022\024\n\014departmentId\030\007 \001(\005\"\"\n\024FetchUserById" +
+      "Request\022\n\n\002id\030\001 \001(\005\")\n\rUserResponses\022\030\n\004" +
+      "user\030\001 \003(\0132\n.user.User\"6\n\036FetchUserByDep" +
+      "artmentIdRequest\022\024\n\014departmentId\030\001 \001(\005*)" +
+      "\n\006Gender\022\010\n\004MALE\020\000\022\n\n\006FEMALE\020\001\022\t\n\005OTHER\020" +
+      "\0022\327\001\n\013UserService\0229\n\nfetchUsers\022\026.google" +
+      ".protobuf.Empty\032\023.user.UserResponses\0227\n\r" +
+      "fetchUserById\022\032.user.FetchUserByIdReques" +
+      "t\032\n.user.User\022T\n\027fetchUserByDepartmentId" +
+      "\022$.user.FetchUserByDepartmentIdRequest\032\023" +
+      ".user.UserResponsesB(\n$demo.protobuf.cor" +
+      "e.autogen.grpc.userP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -77,7 +78,7 @@ public final class UserOuterClass {
     internal_static_user_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_user_User_descriptor,
-        new java.lang.String[] { "Id", "Name", "Sex", "Email", "Age", "DepartmentId", });
+        new java.lang.String[] { "Id", "Name", "Gender", "Email", "Age", "PhoneNumber", "DepartmentId", });
     internal_static_user_FetchUserByIdRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_user_FetchUserByIdRequest_fieldAccessorTable = new

@@ -4,9 +4,9 @@
 package demo.protobuf.core.autogen.grpc.user;
 
 /**
- * Protobuf enum {@code user.Sex}
+ * Protobuf enum {@code user.Gender}
  */
-public enum Sex
+public enum Gender
     implements com.google.protobuf.ProtocolMessageEnum {
   /**
    * <code>MALE = 0;</code>
@@ -49,11 +49,11 @@ public enum Sex
    * @deprecated Use {@link #forNumber(int)} instead.
    */
   @java.lang.Deprecated
-  public static Sex valueOf(int value) {
+  public static Gender valueOf(int value) {
     return forNumber(value);
   }
 
-  public static Sex forNumber(int value) {
+  public static Gender forNumber(int value) {
     switch (value) {
       case 0: return MALE;
       case 1: return FEMALE;
@@ -62,15 +62,15 @@ public enum Sex
     }
   }
 
-  public static com.google.protobuf.Internal.EnumLiteMap<Sex>
+  public static com.google.protobuf.Internal.EnumLiteMap<Gender>
       internalGetValueMap() {
     return internalValueMap;
   }
   private static final com.google.protobuf.Internal.EnumLiteMap<
-      Sex> internalValueMap =
-        new com.google.protobuf.Internal.EnumLiteMap<Sex>() {
-          public Sex findValueByNumber(int number) {
-            return Sex.forNumber(number);
+      Gender> internalValueMap =
+        new com.google.protobuf.Internal.EnumLiteMap<Gender>() {
+          public Gender findValueByNumber(int number) {
+            return Gender.forNumber(number);
           }
         };
 
@@ -87,9 +87,9 @@ public enum Sex
     return demo.protobuf.core.autogen.grpc.user.UserOuterClass.getDescriptor().getEnumTypes().get(0);
   }
 
-  private static final Sex[] VALUES = values();
+  private static final Gender[] VALUES = values();
 
-  public static Sex valueOf(
+  public static Gender valueOf(
       com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
     if (desc.getType() != getDescriptor()) {
       throw new java.lang.IllegalArgumentException(
@@ -103,10 +103,10 @@ public enum Sex
 
   private final int value;
 
-  private Sex(int value) {
+  private Gender(int value) {
     this.value = value;
   }
 
-  // @@protoc_insertion_point(enum_scope:user.Sex)
+  // @@protoc_insertion_point(enum_scope:user.Gender)
 }
 
