@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package department;
+package user;
 import "google/protobuf/empty.proto";
 option java_package = "demo.protobuf.core.autogen.grpc.user";
 option java_multiple_files = true;
@@ -19,11 +19,19 @@ enum Sex {
     OTHER = 2;
 }
 
-message UserRequest{
+message FetchUserByIdRequest{
     int32 id =1;
 }
 
+message UserResponses{
+    repeated User user =1;
+}
+
+message FetchUserByDepartmentIdRequest{
+    int32 departmentId =1;
+}
 service UserService {
-    rpc fetchUsers (google.protobuf.Empty) returns (User);
-    rpc fetchUserById(UserRequest) returns(User);
+    rpc fetchUsers (google.protobuf.Empty) returns (UserResponses);
+    rpc fetchUserById(FetchUserByIdRequest) returns(User);
+    rpc fetchUserByDepartmentId(FetchUserByDepartmentIdRequest) returns(UserResponses);
 }
