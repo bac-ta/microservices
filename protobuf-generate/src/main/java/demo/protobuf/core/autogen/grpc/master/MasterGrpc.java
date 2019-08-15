@@ -29,14 +29,14 @@ public final class MasterGrpc {
   // Static method descriptors that strictly reflect the proto.
 
   /**
-   * Creates a new async stub that supports all call types for the service
+   * Creates a new async stub that supports all call types for the factory
    */
   public static MasterStub newStub(io.grpc.Channel channel) {
     return new MasterStub(channel);
   }
 
   /**
-   * Creates a new blocking-style stub that supports unary and streaming output calls on the service
+   * Creates a new blocking-style stub that supports unary and streaming output calls on the factory
    */
   public static MasterBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
@@ -44,7 +44,7 @@ public final class MasterGrpc {
   }
 
   /**
-   * Creates a new ListenableFuture-style stub that supports unary calls on the service
+   * Creates a new ListenableFuture-style stub that supports unary calls on the factory
    */
   public static MasterFutureStub newFutureStub(
       io.grpc.Channel channel) {

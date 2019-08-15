@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package department;
 import "google/protobuf/empty.proto";
-option java_package = "demo.protobuf.core.autogen.grpc.department";
+option java_package = "configuration.protobuf.core.autogen.grpc.department";
 option java_multiple_files = true;
 
 message Department {

@@ -140,14 +140,14 @@ public final class UserServiceGrpc {
   }
 
   /**
-   * Creates a new async stub that supports all call types for the service
+   * Creates a new async stub that supports all call types for the factory
    */
   public static UserServiceStub newStub(io.grpc.Channel channel) {
     return new UserServiceStub(channel);
   }
 
   /**
-   * Creates a new blocking-style stub that supports unary and streaming output calls on the service
+   * Creates a new blocking-style stub that supports unary and streaming output calls on the factory
    */
   public static UserServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
@@ -155,7 +155,7 @@ public final class UserServiceGrpc {
   }
 
   /**
-   * Creates a new ListenableFuture-style stub that supports unary calls on the service
+   * Creates a new ListenableFuture-style stub that supports unary calls on the factory
    */
   public static UserServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {

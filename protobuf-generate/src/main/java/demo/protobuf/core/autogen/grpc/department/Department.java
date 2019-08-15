@@ -360,7 +360,7 @@ private static final long serialVersionUID = 0L;
               demo.protobuf.core.autogen.grpc.department.Department.class, demo.protobuf.core.autogen.grpc.department.Department.Builder.class);
     }
 
-    // Construct using demo.protobuf.core.autogen.grpc.department.Department.newBuilder()
+    // Construct using configuration.protobuf.core.autogen.grpc.department.Department.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
