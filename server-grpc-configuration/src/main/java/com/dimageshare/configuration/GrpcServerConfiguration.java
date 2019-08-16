@@ -18,7 +18,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @EnableConfigurationProperties
 @ConditionalOnClass({Server.class, GrpcServerFactory.class})
-public class ServerGrpcConfigurationApplication {
+public class ServerGrpcConfiguration {
 
     @ConditionalOnMissingBean
     @Bean
