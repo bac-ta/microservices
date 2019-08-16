@@ -1,5 +1,12 @@
 package com.dimageshare.configuration;
 
+import com.dimageshare.configuration.factory.AddressChannelFactory;
+import com.dimageshare.configuration.factory.GrpcChannelFactory;
+import com.dimageshare.configuration.interceptor.ClientInterceptorContext;
+import com.dimageshare.configuration.interceptor.GrpcClient;
+import com.dimageshare.configuration.processor.GrpcClientProcessor;
+import com.dimageshare.configuration.property.GrpcChannelsProperties;
+import com.dimageshare.configuration.provider.DiscoveryClientChannelProvider;
 import io.grpc.Channel;
 
 import io.grpc.LoadBalancer;
@@ -43,8 +50,8 @@ public class GrpcClientConfiguration {
 
     @ConditionalOnClass(GrpcClient.class)
     @Bean
-    public GrpcClientCreator grpcClientBeanPostProcessor() {
-        return new GrpcClientCreator();
+    public GrpcClientProcessor grpcClientBeanPostProcessor() {
+        return new GrpcClientProcessor();
     }
 
     @Configuration

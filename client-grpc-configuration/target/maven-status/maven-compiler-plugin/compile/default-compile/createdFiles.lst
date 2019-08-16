@@ -1,0 +1,17 @@
+demo\spring\boot\grpc\client\DiscoveryClientNameResolver$1.class
+demo\spring\boot\grpc\client\AddressChannelFactory.class
+demo\spring\boot\grpc\client\DiscoveryClientResolverFactory.class
+demo\spring\boot\grpc\client\GrpcChannelProperties.class
+demo\spring\boot\grpc\client\GrpcClientConfiguration$DiscoveryGrpcClientAutoConfiguration.class
+demo\spring\boot\grpc\client\GrpcChannelFactory.class
+demo\spring\boot\grpc\client\ClientInterceptorInitializer.class
+demo\spring\boot\grpc\client\GrpcClient.class
+demo\spring\boot\grpc\client\DiscoveryClientNameResolver.class
+demo\spring\boot\grpc\client\AddressChannelNameResolver.class
+demo\spring\boot\grpc\client\GrpcClientConfiguration.class
+demo\spring\boot\grpc\client\GrpcChannelsProperties.class
+demo\spring\boot\grpc\client\DiscoveryClientChannelProvider.class
+demo\spring\boot\grpc\client\AddressChannelResolverProvider.class
+demo\spring\boot\grpc\client\ClientInterceptorContext.class
+demo\spring\boot\grpc\client\DiscoveryClientNameResolver$2.class
+demo\spring\boot\grpc\client\GrpcClientCreator.class
