@@ -1,4 +1,4 @@
-package demo.spring.boot.grpc.client;
+package com.dimageshare.configuration;
 
 import java.util.HashMap;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -10,7 +10,7 @@ import java.util.Map;
 
 @Component
 @EnableConfigurationProperties
-@ConfigurationProperties("grpc.client")
+@ConfigurationProperties("grpc.server")
 public class GrpcChannelsProperties {
 
     @NestedConfigurationProperty

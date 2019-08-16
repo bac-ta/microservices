@@ -1,4 +1,4 @@
-package demo.spring.boot.grpc.client;
+package com.dimageshare.configuration;
 
 import java.util.ArrayList;
 import java.util.List;

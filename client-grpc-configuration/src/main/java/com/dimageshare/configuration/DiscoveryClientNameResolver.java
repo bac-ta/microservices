@@ -1,4 +1,4 @@
-package demo.spring.boot.grpc.client;
+package com.dimageshare.configuration;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
@@ -108,7 +108,7 @@ public class DiscoveryClientNameResolver extends NameResolver {
                     }
                     List<EquivalentAddressGroup> equivalentAddressGroups = Lists.newArrayList();
                     for (ServiceInstance serviceInstance : serviceInstanceList) {
-                        logger.info("Found gRPC server factory:{} {}:{}", name, serviceInstance.getHost(), serviceInstance.getPort());
+                        logger.info("Found gRPC server service:{} {}:{}", name, serviceInstance.getHost(), serviceInstance.getPort());
                         EquivalentAddressGroup addressGroup = new EquivalentAddressGroup(new InetSocketAddress(serviceInstance.getHost(), serviceInstance.getPort()), Attributes.EMPTY);
                         equivalentAddressGroups.add(addressGroup);
                     }
