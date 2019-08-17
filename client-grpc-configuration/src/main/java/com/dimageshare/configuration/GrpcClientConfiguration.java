@@ -5,7 +5,7 @@ import com.dimageshare.configuration.factory.GrpcChannelFactory;
 import com.dimageshare.configuration.interceptor.ClientInterceptorContext;
 import com.dimageshare.configuration.interceptor.GrpcClient;
 import com.dimageshare.configuration.processor.GrpcClientProcessor;
-import com.dimageshare.configuration.property.GrpcChannelsProperties;
+import com.dimageshare.configuration.property.GrpcChannelPropertiesDo;
 import com.dimageshare.configuration.provider.DiscoveryClientChannelProvider;
 import io.grpc.Channel;
 
@@ -24,8 +24,8 @@ public class GrpcClientConfiguration {
 
     @ConditionalOnMissingBean
     @Bean
-    public GrpcChannelsProperties grpcChannelsProperties() {
-        return new GrpcChannelsProperties();
+    public GrpcChannelPropertiesDo grpcChannelsProperties() {
+        return new GrpcChannelPropertiesDo();
     }
 
     @Bean
@@ -42,7 +42,7 @@ public class GrpcClientConfiguration {
     @ConditionalOnMissingBean(value = GrpcChannelFactory.class, type = "org.springframework.cloud.client.discovery.DiscoveryClient")
     @Bean
     public GrpcChannelFactory addressChannelFactory(
-            GrpcChannelsProperties properties,
+            GrpcChannelPropertiesDo properties,
             LoadBalancer.Factory loadBalancerFactory,
             ClientInterceptorContext interceptorContext) {
         return new AddressChannelFactory(properties, loadBalancerFactory, interceptorContext);
@@ -58,10 +58,11 @@ public class GrpcClientConfiguration {
     @ConditionalOnBean(DiscoveryClient.class)
     protected static class DiscoveryGrpcClientAutoConfiguration {
 
+        @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
         @ConditionalOnMissingBean
         @Bean
         public GrpcChannelFactory discoveryClientChannelFactory(
-                GrpcChannelsProperties properties,
+                GrpcChannelPropertiesDo properties,
                 DiscoveryClient discoveryClient,
                 LoadBalancer.Factory loadBalancerFactory,
                 ClientInterceptorContext globalClientInterceptorRegistry) {

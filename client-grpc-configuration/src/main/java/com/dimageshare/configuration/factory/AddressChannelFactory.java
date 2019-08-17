@@ -1,9 +1,9 @@
 package com.dimageshare.configuration.factory;
 
+import com.dimageshare.configuration.property.GrpcChannelPropertiesDo;
 import com.dimageshare.configuration.provider.AddressChannelResolverProvider;
 import com.dimageshare.configuration.interceptor.ClientInterceptorContext;
 import com.dimageshare.configuration.property.GrpcChannelProperties;
-import com.dimageshare.configuration.property.GrpcChannelsProperties;
 import io.grpc.Channel;
 import io.grpc.ClientInterceptor;
 import io.grpc.ClientInterceptors;
@@ -19,14 +19,14 @@ import java.util.concurrent.TimeUnit;
 
 public class AddressChannelFactory implements GrpcChannelFactory {
 
-    private final GrpcChannelsProperties properties;
+    private final GrpcChannelPropertiesDo properties;
     private final LoadBalancer.Factory loadBalancerFactory;
     private final NameResolver.Factory nameResolverFactory;
     private final ClientInterceptorContext interceptorContext;
 
-    public AddressChannelFactory(GrpcChannelsProperties properties,
-            LoadBalancer.Factory loadBalancerFactory,
-            ClientInterceptorContext interceptorContext) {
+    public AddressChannelFactory(GrpcChannelPropertiesDo properties,
+                                 LoadBalancer.Factory loadBalancerFactory,
+                                 ClientInterceptorContext interceptorContext) {
 
         this.properties = properties;
         this.loadBalancerFactory = loadBalancerFactory;

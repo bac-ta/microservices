@@ -1,6 +1,6 @@
 package com.dimageshare.configuration.provider;
 
-import com.dimageshare.configuration.property.GrpcChannelsProperties;
+import com.dimageshare.configuration.property.GrpcChannelPropertiesDo;
 import com.dimageshare.configuration.resolver.AddressChannelNameResolver;
 import io.grpc.Attributes;
 import io.grpc.NameResolver;
@@ -11,9 +11,9 @@ import javax.annotation.Nullable;
 
 public class AddressChannelResolverProvider extends NameResolverProvider {
 
-    private final GrpcChannelsProperties properties;
+    private final GrpcChannelPropertiesDo properties;
 
-    public AddressChannelResolverProvider(GrpcChannelsProperties properties) {
+    public AddressChannelResolverProvider(GrpcChannelPropertiesDo properties) {
         this.properties = properties;
     }
 

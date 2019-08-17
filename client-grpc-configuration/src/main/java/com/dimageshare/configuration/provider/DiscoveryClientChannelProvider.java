@@ -4,7 +4,7 @@ import com.dimageshare.configuration.factory.GrpcChannelFactory;
 import com.dimageshare.configuration.factory.DiscoveryClientResolverFactory;
 import com.dimageshare.configuration.interceptor.ClientInterceptorContext;
 import com.dimageshare.configuration.property.GrpcChannelProperties;
-import com.dimageshare.configuration.property.GrpcChannelsProperties;
+import com.dimageshare.configuration.property.GrpcChannelPropertiesDo;
 import io.grpc.Channel;
 import io.grpc.ClientInterceptor;
 import io.grpc.ClientInterceptors;
@@ -16,13 +16,13 @@ import java.util.List;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 
 public class DiscoveryClientChannelProvider implements GrpcChannelFactory {
-    private final GrpcChannelsProperties channels;
+    private final GrpcChannelPropertiesDo channels;
     private final DiscoveryClient client;
     private final LoadBalancer.Factory loadBalancerFactory;
     private final ClientInterceptorContext interceptorContext;
 
     public DiscoveryClientChannelProvider(
-            GrpcChannelsProperties channels,
+            GrpcChannelPropertiesDo channels,
             DiscoveryClient client,
             LoadBalancer.Factory loadBalancerFactory,
             ClientInterceptorContext interceptorContext) {
