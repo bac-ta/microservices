@@ -8,9 +8,9 @@
         <version>2.1.7.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.dimageshare.configuration</groupId>
+    <groupId>com.dimageshare</groupId>
     <artifactId>client-grpc-configuration</artifactId>
-    <version>0.1.1</version>
+    <version>0.0.1</version>
     <name>Spring Boot gRPC Client Starter</name>
     <description>Config grpc for microservice client</description>
 

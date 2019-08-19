@@ -1,4 +1,4 @@
-package com.dimageshare.user.config;
+package com.dimageshare.department.config;
 
 import com.dimageshare.configuration.interceptor.ServerInterceptorInitializer;
 import com.dimageshare.frameworkhandler.grpc.ErrorHandlingInterceptor;

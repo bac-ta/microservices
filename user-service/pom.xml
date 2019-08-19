@@ -23,6 +23,8 @@
         <grpc.version>1.10.1</grpc.version>
         <protobuf.version>0.0.1</protobuf.version>
         <server.gprc.version>0.0.1</server.gprc.version>
+        <client.gprc.version>0.0.1</client.gprc.version>
+        <framework.handler.version>0.0.1</framework.handler.version>
         <appName>${project.artifactId}-${project.version}</appName>
     </properties>
 
@@ -100,10 +102,25 @@
             <version>${protobuf.version}</version>
         </dependency>
 
+        <!--Server grpc configuration-->
         <dependency>
             <groupId>com.dimageshare</groupId>
             <artifactId>server-grpc-configuration</artifactId>
             <version>${server.gprc.version}</version>
+        </dependency>
+
+        <!--Client grpc configuration-->
+        <dependency>
+            <groupId>com.dimageshare</groupId>
+            <artifactId>client-grpc-configuration</artifactId>
+            <version>${client.gprc.version}</version>
+        </dependency>
+
+        <!--Framework handler-->
+        <dependency>
+            <groupId>com.dimageshare</groupId>
+            <artifactId>framework-handler</artifactId>
+            <version>${framework.handler.version}</version>
         </dependency>
 
     </dependencies>
