@@ -48,7 +48,7 @@ public final class DepartmentOuterClass {
       "pty\032\037.department.DepartmentResponses\022O\n\r" +
       "fetchUserById\022&.department.FetchDepartme" +
       "ntByIdRequest\032\026.department.DepartmentB.\n" +
-      "*configuration.protobuf.core.autogen.grpc.departm" +
+      "*com.dimageshare.logging.configuration.protobuf.core.autogen.grpc.departm" +
       "entP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

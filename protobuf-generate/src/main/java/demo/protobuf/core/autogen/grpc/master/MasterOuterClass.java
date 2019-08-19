@@ -25,7 +25,7 @@ public final class MasterOuterClass {
     java.lang.String[] descriptorData = {
       "\n\014master.proto\022\006master\032\033google/protobuf/" +
       "empty.proto\032\037google/protobuf/timestamp.p" +
-      "roto2\010\n\006MasterB*\n&configuration.protobuf.core.aut" +
+      "roto2\010\n\006MasterB*\n&com.dimageshare.logging.configuration.protobuf.core.aut" +
       "ogen.grpc.masterP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

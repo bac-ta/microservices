@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package user;
 import "google/protobuf/empty.proto";
-option java_package = "configuration.protobuf.core.autogen.grpc.user";
+option java_package = "com.dimageshare.logging.configuration.protobuf.core.autogen.grpc.user";
 option java_multiple_files = true;
 
 message User {

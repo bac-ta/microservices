@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.dimageshare</groupId>
     <artifactId>user-service</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>user-service</name>
     <description>Service user</description>
 
@@ -21,7 +21,8 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <grpc.version>1.10.1</grpc.version>
-        <protobuf.version>0.1.1</protobuf.version>
+        <protobuf.version>0.0.1</protobuf.version>
+        <server.gprc.version>0.0.1</server.gprc.version>
         <appName>${project.artifactId}-${project.version}</appName>
     </properties>
 
@@ -102,7 +103,7 @@
         <dependency>
             <groupId>com.dimageshare</groupId>
             <artifactId>server-grpc-configuration</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>${server.gprc.version}</version>
         </dependency>
 
     </dependencies>

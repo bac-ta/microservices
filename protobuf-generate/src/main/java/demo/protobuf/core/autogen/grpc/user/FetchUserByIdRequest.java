@@ -258,7 +258,7 @@ private static final long serialVersionUID = 0L;
               demo.protobuf.core.autogen.grpc.user.FetchUserByIdRequest.class, demo.protobuf.core.autogen.grpc.user.FetchUserByIdRequest.Builder.class);
     }
 
-    // Construct using configuration.protobuf.core.autogen.grpc.user.FetchUserByIdRequest.newBuilder()
+    // Construct using com.dimageshare.logging.configuration.protobuf.core.autogen.grpc.user.FetchUserByIdRequest.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }

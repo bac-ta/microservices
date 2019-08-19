@@ -293,7 +293,7 @@ private static final long serialVersionUID = 0L;
               demo.protobuf.core.autogen.grpc.department.DepartmentResponses.class, demo.protobuf.core.autogen.grpc.department.DepartmentResponses.Builder.class);
     }
 
-    // Construct using configuration.protobuf.core.autogen.grpc.department.DepartmentResponses.newBuilder()
+    // Construct using com.dimageshare.logging.configuration.protobuf.core.autogen.grpc.department.DepartmentResponses.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }

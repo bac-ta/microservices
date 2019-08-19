@@ -1,7 +1,7 @@
 package com.dimageshare.user.config;
 
+import com.dimageshare.configuration.interceptor.ServerInterceptorInitializer;
 import com.google.common.collect.Lists;
-import demo.spring.boot.grpc.server.ServerInterceptorInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

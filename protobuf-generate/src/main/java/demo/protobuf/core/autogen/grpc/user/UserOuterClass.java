@@ -57,7 +57,7 @@ public final class UserOuterClass {
       "fetchUserById\022\032.user.FetchUserByIdReques" +
       "t\032\n.user.User\022T\n\027fetchUserByDepartmentId" +
       "\022$.user.FetchUserByDepartmentIdRequest\032\023" +
-      ".user.UserResponsesB(\n$configuration.protobuf.cor" +
+      ".user.UserResponsesB(\n$com.dimageshare.logging.configuration.protobuf.cor" +
       "e.autogen.grpc.userP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
