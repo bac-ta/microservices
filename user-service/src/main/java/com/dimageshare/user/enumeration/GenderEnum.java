@@ -4,7 +4,7 @@ import lombok.Getter;
 
 import java.util.Arrays;
 
-public enum Gender {
+public enum GenderEnum {
     MALE(0, "made"),
     FEMALE(1, "female"),
     OTHER(2, "other"),
@@ -14,7 +14,7 @@ public enum Gender {
 
     private String description;
 
-    Gender(int code, final String description) {
+    GenderEnum(int code, final String description) {
         this.code = code;
         this.description = description;
     }
@@ -24,9 +24,9 @@ public enum Gender {
         return description;
     }
 
-    public static Gender findByCode(int code) {
-        return Arrays.stream(Gender.values())
-                .filter(gender -> gender.getCode() == code)
-                .findFirst().orElse(Gender.UNKNOWN);
+    public static GenderEnum findByCode(int code) {
+        return Arrays.stream(GenderEnum.values())
+                .filter(genderEnum -> genderEnum.getCode() == code)
+                .findFirst().orElse(GenderEnum.UNKNOWN);
     }
 }

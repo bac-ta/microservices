@@ -23,11 +23,11 @@ public interface UserOrBuilder extends
       getNameBytes();
 
   /**
-   * <code>.user.Gender gender = 3;</code>
+   * <code>.user.Gender genderEnum = 3;</code>
    */
   int getGenderValue();
   /**
-   * <code>.user.Gender gender = 3;</code>
+   * <code>.user.Gender genderEnum = 3;</code>
    */
   com.dimageshare.protobuf.core.autogen.grpc.user.Gender getGender();
 

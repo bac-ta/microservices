@@ -1,6 +1,6 @@
 package com.dimageshare.user.repository;
 
-import com.dimageshare.user.entity.User;
+import com.dimageshare.user.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -8,15 +8,15 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Integer> {
-    User findById(int id);
+public interface UserRepository extends JpaRepository<UserEntity, Integer> {
+    UserEntity findById(int id);
 
-    List<User> findAllByDepartmentId(int departmentId);
+    List<UserEntity> findAllByDepartmentId(int departmentId);
 
-    User save(User user);
+    UserEntity save(UserEntity userEntity);
 
     void removeById(int userId);
 
     @Query(value = "SELECT * FROM user", nativeQuery = true)
-    List<User> findAll();
+    List<UserEntity> findAll();
 }

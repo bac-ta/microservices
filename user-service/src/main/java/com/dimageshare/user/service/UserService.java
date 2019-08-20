@@ -1,10 +1,13 @@
 package com.dimageshare.user.service;
 
 import com.dimageshare.configuration.interceptor.GrpcClient;
-import com.dimageshare.protobuf.core.autogen.grpc.user.UserServiceGrpc;
+import com.dimageshare.protobuf.core.autogen.grpc.user.User;
+import com.dimageshare.protobuf.core.autogen.grpc.user.UserIdRequest;
+import com.dimageshare.user.entity.UserEntity;
 import com.dimageshare.user.repository.UserRepository;
-import com.google.common.annotations.VisibleForTesting;
 import io.grpc.Channel;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,24 +15,19 @@ import org.springframework.stereotype.Service;
 public class UserService {
     @GrpcClient(value = "user")
     private Channel userChannel;
+    private static final Logger logger = LoggerFactory.getLogger(UserService.class);
 
     private UserRepository userRepository;
-    private UserServiceGrpc.UserServiceBlockingStub stub;
-
-    @VisibleForTesting
-    protected UserService(Channel userChannel) {
-        this.userChannel = userChannel;
-    }
 
     @Autowired
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
-
-    private final UserServiceGrpc.UserServiceBlockingStub getStub() {
-        return UserServiceGrpc.newBlockingStub(userChannel);
+    public User findById(UserIdRequest request) {
+        int id = request.getId();
+        UserEntity entity = userRepository.findById(id);
+        return entity.initUser(entity);
     }
-
 
 }
