@@ -4,7 +4,7 @@ syntax = "proto3";
 import "google/protobuf/empty.proto";
 import "google/protobuf/timestamp.proto";
 
-option java_package = "demo.protobuf.core.autogen.grpc.master";
+option java_package = "com.dimageshare.protobuf.core.autogen.grpc.master";
 option java_multiple_files = true;
 
 package master;

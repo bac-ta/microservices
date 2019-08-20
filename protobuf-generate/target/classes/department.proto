@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package department;
 import "google/protobuf/empty.proto";
-option java_package = "demo.protobuf.core.autogen.grpc.department";
+option java_package = "com.dimageshare.protobuf.core.autogen.grpc.department";
 option java_multiple_files = true;
 
 message Department {
@@ -11,14 +11,15 @@ message Department {
     string description =3;
 }
 
-message FetchDepartmentByIdRequest{
+message DepartmentByIdRequest{
     int32 id =1;
 }
 
 message DepartmentResponses{
     repeated Department department =1;
 }
-service UserService {
-    rpc fetchUsers (google.protobuf.Empty) returns (DepartmentResponses);
-    rpc fetchUserById(FetchDepartmentByIdRequest) returns(Department);
+service DepartmentService {
+    rpc findDepartments (google.protobuf.Empty) returns (DepartmentResponses);
+    rpc findDepartmentById(DepartmentByIdRequest) returns (Department);
+    rpc removeDepartmentById(DepartmentByIdRequest) returns (google.protobuf.Empty);
 }

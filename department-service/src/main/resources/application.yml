@@ -17,6 +17,16 @@ spring:
 
 max-age: 3600
 
+#Config grpc client
+grpc:
+  client:
+    channels:
+      master:
+        hosts:
+          - ${GRPC_MASTER_HOST:localhost}
+        ports:
+          - ${GRPC_MASTER_PORT:11994}
+
 #Config for tomcat
 server:
   port: 5593
