@@ -5,7 +5,13 @@ import com.dimageshare.protobuf.core.autogen.grpc.user.User;
 import com.dimageshare.user.enumeration.GenderEnum;
 import lombok.Data;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 @Entity
 @Data
@@ -55,16 +61,8 @@ public class UserEntity {
     /**
      * Map UserEntity to User
      */
-    public User initUser(UserEntity entity) {
-        Integer id = entity.getId();
-        String name = entity.getName();
-        GenderEnum genderEnum = entity.getGenderEnum();
+    public User initUser() {
         Gender gender = Gender.forNumber(genderEnum.getCode());
-        String email = entity.getEmail();
-        Integer age = entity.getAge();
-        String phoneNumber = entity.getPhoneNumber();
-        Integer departmentId = entity.getDepartmentId();
-
         return User.newBuilder()
                 .setId(id)
                 .setName(name)
@@ -74,5 +72,16 @@ public class UserEntity {
                 .setPhoneNumber(phoneNumber)
                 .setDepartmentId(departmentId)
                 .build();
+    }
+
+    public UserEntity(User user) {
+        this.id = user.getId();
+        this.name = user.getName();
+        Gender gender = user.getGender();
+        this.genderEnum = GenderEnum.findByCode(gender.getNumber());
+        this.email = user.getEmail();
+        this.age = user.getAge();
+        this.phoneNumber = user.getPhoneNumber();
+        this.departmentId = user.getDepartmentId();
     }
 }
