@@ -1,4 +1,4 @@
-package com.dimageshare.department.config;
+package com.dimageshare.department.grpc;
 
 import com.dimageshare.configuration.interceptor.ServerInterceptorInitializer;
 import com.dimageshare.frameworkhandler.grpc.ErrorHandlingInterceptor;
@@ -12,7 +12,7 @@ public class GrpcServerConfiguration {
     @Bean
     public ServerInterceptorInitializer globalServerInterceptorInitializer() {
         return () -> Lists.newArrayList(
-                new GrpcServerLoggingInterceptor(),
-                new ErrorHandlingInterceptor());
+                new ErrorHandlingInterceptor(),
+                new GrpcServerLoggingInterceptor());
     }
 }

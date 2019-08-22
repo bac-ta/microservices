@@ -15,5 +15,6 @@ import java.lang.annotation.Target;
 @Documented
 @Service
 public @interface GrpcServerService {
+    Class<?> value();
     Class<? extends ServerInterceptor>[] interceptors() default {};
 }
