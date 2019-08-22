@@ -41,36 +41,18 @@ public class UserEntity {
     private Integer departmentId;
 
     /**
-     * Contructor
-     */
-
-    public UserEntity() {
-        super();
-    }
-
-    public UserEntity(Integer id, String name, GenderEnum genderEnum, String email, Integer age, String phoneNumber, Integer departmentId) {
-        this.id = id;
-        this.name = name;
-        this.genderEnum = genderEnum;
-        this.email = email;
-        this.age = age;
-        this.phoneNumber = phoneNumber;
-        this.departmentId = departmentId;
-    }
-
-    /**
      * Map UserEntity to User
      */
-    public User initUser() {
-        Gender gender = Gender.forNumber(genderEnum.getCode());
+    public User initUser(UserEntity entity) {
+        Gender gender = Gender.forNumber(entity.getGenderEnum().getCode());
         return User.newBuilder()
-                .setId(id)
-                .setName(name)
+                .setId(entity.getId())
+                .setName(entity.getName())
                 .setGender(gender)
-                .setEmail(email)
-                .setAge(age)
-                .setPhoneNumber(phoneNumber)
-                .setDepartmentId(departmentId)
+                .setEmail(entity.getEmail())
+                .setAge(entity.getAge())
+                .setPhoneNumber(entity.getPhoneNumber())
+                .setDepartmentId(entity.getDepartmentId())
                 .build();
     }
 

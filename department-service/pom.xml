@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.dimageshare</groupId>
-    <artifactId>department-service</artifactId>
+    <artifactId>departmentEntity-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>department-service</name>
+    <name>departmentEntity-service</name>
     <description>Department service</description>
 
     <properties>
