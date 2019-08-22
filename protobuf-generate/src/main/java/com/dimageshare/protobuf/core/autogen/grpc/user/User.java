@@ -165,13 +165,13 @@ private static final long serialVersionUID = 0L;
   public static final int GENDER_FIELD_NUMBER = 3;
   private int gender_;
   /**
-   * <code>.user.Gender genderEnum = 3;</code>
+   * <code>.user.Gender gender = 3;</code>
    */
   public int getGenderValue() {
     return gender_;
   }
   /**
-   * <code>.user.Gender genderEnum = 3;</code>
+   * <code>.user.Gender gender = 3;</code>
    */
   public com.dimageshare.protobuf.core.autogen.grpc.user.Gender getGender() {
     com.dimageshare.protobuf.core.autogen.grpc.user.Gender result = com.dimageshare.protobuf.core.autogen.grpc.user.Gender.valueOf(gender_);
@@ -745,13 +745,13 @@ private static final long serialVersionUID = 0L;
 
     private int gender_ = 0;
     /**
-     * <code>.user.Gender genderEnum = 3;</code>
+     * <code>.user.Gender gender = 3;</code>
      */
     public int getGenderValue() {
       return gender_;
     }
     /**
-     * <code>.user.Gender genderEnum = 3;</code>
+     * <code>.user.Gender gender = 3;</code>
      */
     public Builder setGenderValue(int value) {
       gender_ = value;
@@ -759,14 +759,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.user.Gender genderEnum = 3;</code>
+     * <code>.user.Gender gender = 3;</code>
      */
     public com.dimageshare.protobuf.core.autogen.grpc.user.Gender getGender() {
       com.dimageshare.protobuf.core.autogen.grpc.user.Gender result = com.dimageshare.protobuf.core.autogen.grpc.user.Gender.valueOf(gender_);
       return result == null ? com.dimageshare.protobuf.core.autogen.grpc.user.Gender.UNRECOGNIZED : result;
     }
     /**
-     * <code>.user.Gender genderEnum = 3;</code>
+     * <code>.user.Gender gender = 3;</code>
      */
     public Builder setGender(com.dimageshare.protobuf.core.autogen.grpc.user.Gender value) {
       if (value == null) {
@@ -778,7 +778,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.user.Gender genderEnum = 3;</code>
+     * <code>.user.Gender gender = 3;</code>
      */
     public Builder clearGender() {
       
