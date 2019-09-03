@@ -20,10 +20,10 @@ public final class DepartmentOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_department_Department_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_department_DepartmentByIdRequest_descriptor;
+    internal_static_department_DepartmentIdRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_department_DepartmentByIdRequest_fieldAccessorTable;
+      internal_static_department_DepartmentIdRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_department_DepartmentResponses_descriptor;
   static final 
@@ -41,17 +41,17 @@ public final class DepartmentOuterClass {
       "\n\020department.proto\022\ndepartment\032\033google/p" +
       "rotobuf/empty.proto\";\n\nDepartment\022\n\n\002id\030" +
       "\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\023\n\013description\030\003 \001(\t" +
-      "\"#\n\025DepartmentByIdRequest\022\n\n\002id\030\001 \001(\005\"A\n" +
-      "\023DepartmentResponses\022*\n\ndepartment\030\001 \003(\013" +
-      "2\026.department.Department2\203\002\n\021DepartmentS" +
-      "ervice\022J\n\017findDepartments\022\026.google.proto" +
-      "buf.Empty\032\037.department.DepartmentRespons" +
-      "es\022O\n\022findDepartmentById\022!.department.De" +
-      "partmentByIdRequest\032\026.department.Departm" +
-      "ent\022Q\n\024removeDepartmentById\022!.department" +
-      ".DepartmentByIdRequest\032\026.google.protobuf" +
-      ".EmptyB9\n5com.dimageshare.protobuf.core." +
-      "autogen.grpc.departmentP\001b\006proto3"
+      "\"!\n\023DepartmentIdRequest\022\n\n\002id\030\001 \001(\005\"A\n\023D" +
+      "epartmentResponses\022*\n\ndepartment\030\001 \003(\0132\026" +
+      ".department.Department2\377\001\n\021DepartmentSer" +
+      "vice\022J\n\017findDepartments\022\026.google.protobu" +
+      "f.Empty\032\037.department.DepartmentResponses" +
+      "\022M\n\022findDepartmentById\022\037.department.Depa" +
+      "rtmentIdRequest\032\026.department.Department\022" +
+      "O\n\024removeDepartmentById\022\037.department.Dep" +
+      "artmentIdRequest\032\026.google.protobuf.Empty" +
+      "B9\n5com.dimageshare.protobuf.core.autoge" +
+      "n.grpc.departmentP\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -72,11 +72,11 @@ public final class DepartmentOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_department_Department_descriptor,
         new java.lang.String[] { "Id", "Name", "Description", });
-    internal_static_department_DepartmentByIdRequest_descriptor =
+    internal_static_department_DepartmentIdRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_department_DepartmentByIdRequest_fieldAccessorTable = new
+    internal_static_department_DepartmentIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_department_DepartmentByIdRequest_descriptor,
+        internal_static_department_DepartmentIdRequest_descriptor,
         new java.lang.String[] { "Id", });
     internal_static_department_DepartmentResponses_descriptor =
       getDescriptor().getMessageTypes().get(2);

@@ -11,7 +11,7 @@ message Department {
     string description =3;
 }
 
-message DepartmentByIdRequest{
+message DepartmentIdRequest{
     int32 id =1;
 }
 
@@ -20,6 +20,6 @@ message DepartmentResponses{
 }
 service DepartmentService {
     rpc findDepartments (google.protobuf.Empty) returns (DepartmentResponses);
-    rpc findDepartmentById(DepartmentByIdRequest) returns (Department);
-    rpc removeDepartmentById(DepartmentByIdRequest) returns (google.protobuf.Empty);
+    rpc findDepartmentById(DepartmentIdRequest) returns (Department);
+    rpc removeDepartmentById(DepartmentIdRequest) returns (google.protobuf.Empty);
 }
