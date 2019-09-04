@@ -45,11 +45,7 @@ public class DepartmentService {
         DepartmentResponses departments = stub.findDepartments(Empty.getDefaultInstance());
 
         return departments.getDepartmentList().stream().map(el -> {
-            DepartmentResponse response = new DepartmentResponse();
-            response.setId(el.getId());
-            response.setName(el.getName());
-            response.setDescription(el.getDescription());
-            return response;
+            return new DepartmentResponse(el.getId(), el.getName(), el.getDescription());
         }).collect(Collectors.toList());
     }
 
