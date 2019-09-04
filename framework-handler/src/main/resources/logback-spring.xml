@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+
+    <include resource="com/dimageshare/logging/configuration/config.xml"/>
+    <include resource="com/dimageshare/logging/configuration/console-appender.xml"/>
+
+    <springProfile name="default,local,develop">
+        <include resource="com/dimageshare/logging/configuration/logger-default.xml"/>
+    </springProfile>
+
+    <springProfile name="staging">
+        <include resource="com/dimageshare/logging/configuration/logger-staging.xml"/>
+    </springProfile>
+
+    <springProfile name="production">
+        <include resource="com/dimageshare/logging/configuration/logger-production.xml"/>
+    </springProfile>
+
+</configuration>

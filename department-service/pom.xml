@@ -9,14 +9,22 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.dimageshare</groupId>
-    <artifactId>department-service</artifactId>
+    <artifactId>departmentEntity-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>department-service</name>
+    <name>departmentEntity-service</name>
     <description>Department service</description>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <grpc.version>1.22.1</grpc.version>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <grpc.version>1.10.1</grpc.version>
+        <protobuf.version>0.0.1</protobuf.version>
+        <server.gprc.version>0.0.1</server.gprc.version>
+        <framework.handler.version>0.0.1</framework.handler.version>
+        <appName>${project.artifactId}-${project.version}</appName>
     </properties>
 
     <dependencies>
@@ -47,16 +55,16 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-json</artifactId>
         </dependency>
+        <!--For hibernate-->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+        </dependency>
         <!--For mysql-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
-        </dependency>
-        <!--For hibernate-->
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-core</artifactId>
         </dependency>
         <!--For common lang3-->
         <dependency>
@@ -85,6 +93,28 @@
             <artifactId>grpc-netty</artifactId>
             <version>${grpc.version}</version>
         </dependency>
+
+        <!--Protobuf genreate-->
+        <dependency>
+            <groupId>demo.protobuf.core</groupId>
+            <artifactId>protobuf-generate</artifactId>
+            <version>${protobuf.version}</version>
+        </dependency>
+
+        <!--Server grpc configuration-->
+        <dependency>
+            <groupId>com.dimageshare</groupId>
+            <artifactId>server-grpc-configuration</artifactId>
+            <version>${server.gprc.version}</version>
+        </dependency>
+
+        <!--Framework handler-->
+        <dependency>
+            <groupId>com.dimageshare</groupId>
+            <artifactId>framework-handler</artifactId>
+            <version>${framework.handler.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>

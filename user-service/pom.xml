@@ -9,14 +9,22 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.dimageshare</groupId>
-    <artifactId>user-service</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>user-service</name>
-    <description>Service user</description>
+    <artifactId>userEntity-service</artifactId>
+    <version>0.0.1</version>
+    <name>userEntity-service</name>
+    <description>Service userEntity</description>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <grpc.version>1.22.1</grpc.version>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <grpc.version>1.10.1</grpc.version>
+        <protobuf.version>0.0.1</protobuf.version>
+        <server.gprc.version>0.0.1</server.gprc.version>
+        <framework.handler.version>0.0.1</framework.handler.version>
+        <appName>${project.artifactId}-${project.version}</appName>
     </properties>
 
     <dependencies>
@@ -85,8 +93,29 @@
             <artifactId>grpc-netty</artifactId>
             <version>${grpc.version}</version>
         </dependency>
-    </dependencies>
 
+        <!--Protobuf genreate-->
+        <dependency>
+            <groupId>demo.protobuf.core</groupId>
+            <artifactId>protobuf-generate</artifactId>
+            <version>${protobuf.version}</version>
+        </dependency>
+
+        <!--Server grpc configuration-->
+        <dependency>
+            <groupId>com.dimageshare</groupId>
+            <artifactId>server-grpc-configuration</artifactId>
+            <version>${server.gprc.version}</version>
+        </dependency>
+
+        <!--Framework handler-->
+        <dependency>
+            <groupId>com.dimageshare</groupId>
+            <artifactId>framework-handler</artifactId>
+            <version>${framework.handler.version}</version>
+        </dependency>
+
+    </dependencies>
 
     <build>
         <plugins>
