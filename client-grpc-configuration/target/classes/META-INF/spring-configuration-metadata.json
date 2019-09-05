@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "grpc.client",
+      "type": "com.dimageshare.configuration.property.GrpcChannelPropertiesDo",
+      "sourceType": "com.dimageshare.configuration.property.GrpcChannelPropertiesDo"
+    },
+    {
+      "name": "grpc.client.channels",
+      "type": "java.util.Map",
+      "sourceType": "com.dimageshare.configuration.property.GrpcChannelPropertiesDo",
+      "sourceMethod": "getChannels()"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}

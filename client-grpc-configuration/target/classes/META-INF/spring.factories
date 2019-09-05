@@ -1,1 +1,1 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=demo.spring.boot.grpc.client.GrpcClientConfiguration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.dimageshare.configuration.GrpcClientConfiguration

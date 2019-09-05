@@ -18,6 +18,7 @@ message DepartmentIdRequest{
 message DepartmentResponses{
     repeated Department department =1;
 }
+
 service DepartmentService {
     rpc findDepartments (google.protobuf.Empty) returns (DepartmentResponses);
     rpc findDepartmentById(DepartmentIdRequest) returns (Department);
