@@ -9,6 +9,9 @@ import org.springframework.cloud.client.discovery.DiscoveryClient;
 import javax.annotation.Nullable;
 import java.net.URI;
 
+/**
+ * @author bac-ta
+ **/
 public class DiscoveryClientResolverFactory extends NameResolver.Factory {
     private final DiscoveryClient client;
 

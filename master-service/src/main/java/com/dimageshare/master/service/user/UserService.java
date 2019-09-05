@@ -1,8 +1,10 @@
 package com.dimageshare.master.service.user;
 
 import com.dimageshare.configuration.interceptor.GrpcClient;
+import com.dimageshare.master.model.request.UserRequest;
 import com.dimageshare.master.model.response.UserResponse;
 import com.dimageshare.protobuf.core.autogen.grpc.user.DepartmentIdRequest;
+import com.dimageshare.protobuf.core.autogen.grpc.user.Gender;
 import com.dimageshare.protobuf.core.autogen.grpc.user.User;
 import com.dimageshare.protobuf.core.autogen.grpc.user.UserIdRequest;
 import com.dimageshare.protobuf.core.autogen.grpc.user.UserResponses;
@@ -90,6 +92,29 @@ public class UserService {
         stub = getStub();
         UserIdRequest request = UserIdRequest.newBuilder().setId(id).build();
         stub.removeUserById(request);
+    }
+
+    public void saveUser(UserRequest request) {
+        String name = request.getName();
+        String email = request.getEmail();
+        Integer age = request.getAge();
+
+        if (age == null)
+            age = 0;
+
+        else if (age < 0)
+            throw new IllegalArgumentException("parameter 'age' invalid");
+
+        Integer genderNum = request.getGender();
+        Gender gender = Gender.forNumber(genderNum);
+        String phoneNumber = request.getPhoneNumber();
+        int departmentId = request.getDepartmentId();
+
+        User user = User.newBuilder().setName(name).setEmail(email).setAge(age).setGender(gender)
+                .setPhoneNumber(phoneNumber).setDepartmentId(departmentId).build();
+
+        stub.saveUser(user);
+
     }
 
 }

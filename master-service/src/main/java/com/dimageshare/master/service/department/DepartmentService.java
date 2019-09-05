@@ -1,6 +1,7 @@
 package com.dimageshare.master.service.department;
 
 import com.dimageshare.configuration.interceptor.GrpcClient;
+import com.dimageshare.master.model.request.DepartmentRequest;
 import com.dimageshare.master.model.response.DepartmentResponse;
 import com.dimageshare.protobuf.core.autogen.grpc.department.Department;
 import com.dimageshare.protobuf.core.autogen.grpc.department.DepartmentIdRequest;
@@ -55,4 +56,11 @@ public class DepartmentService {
         stub.removeDepartmentById(request);
     }
 
+    public void saveDepartment(DepartmentRequest request){
+        stub =getStub();
+        String name = request.getName();
+        String description =request.getDescription();
+        Department department = Department.newBuilder().setName(name).setDescription(description).build();
+
+    }
 }

@@ -8,6 +8,7 @@ import io.grpc.NameResolver;
 import io.grpc.Status;
 import io.grpc.internal.LogExceptionRunnable;
 import io.grpc.internal.SharedResourceHolder;
+
 import java.net.InetSocketAddress;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -15,11 +16,15 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.concurrent.GuardedBy;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 
+/**
+ * @author bac-ta
+ */
 public class DiscoveryClientNameResolver extends NameResolver {
 
     private static Logger logger = LoggerFactory.getLogger(DiscoveryClientNameResolver.class);
@@ -43,9 +48,9 @@ public class DiscoveryClientNameResolver extends NameResolver {
     private List<ServiceInstance> serviceInstanceList;
 
     public DiscoveryClientNameResolver(String name,
-            DiscoveryClient client,
-            SharedResourceHolder.Resource<ScheduledExecutorService> timerServiceResource,
-            SharedResourceHolder.Resource<ExecutorService> executorResource) {
+                                       DiscoveryClient client,
+                                       SharedResourceHolder.Resource<ScheduledExecutorService> timerServiceResource,
+                                       SharedResourceHolder.Resource<ExecutorService> executorResource) {
         this.name = name;
         this.client = client;
         this.timerServiceResource = timerServiceResource;
@@ -85,9 +90,10 @@ public class DiscoveryClientNameResolver extends NameResolver {
                     resolutionTask.cancel(false);
                     resolutionTask = null;
                 }
-                if (shutdown) {
+
+                if (shutdown)
                     return;
-                }
+
                 savedListener = listener;
                 resolving = true;
             }
@@ -103,19 +109,20 @@ public class DiscoveryClientNameResolver extends NameResolver {
                 if (newServiceInstanceList != null && newServiceInstanceList.size() > 0) {
                     if (isNeedToUpdateServiceInstanceList(newServiceInstanceList)) {
                         serviceInstanceList = newServiceInstanceList;
-                    } else {
+                    } else
                         return;
-                    }
+
                     List<EquivalentAddressGroup> equivalentAddressGroups = Lists.newArrayList();
                     for (ServiceInstance serviceInstance : serviceInstanceList) {
                         logger.info("Found gRPC server service:{} {}:{}", name, serviceInstance.getHost(), serviceInstance.getPort());
                         EquivalentAddressGroup addressGroup = new EquivalentAddressGroup(new InetSocketAddress(serviceInstance.getHost(), serviceInstance.getPort()), Attributes.EMPTY);
                         equivalentAddressGroups.add(addressGroup);
                     }
+
                     savedListener.onAddresses(equivalentAddressGroups, Attributes.EMPTY);
-                } else {
+                } else
                     savedListener.onError(Status.UNAVAILABLE.withCause(new RuntimeException("UNAVAILABLE: NameResolver returned an empty list")));
-                }
+
             } finally {
                 synchronized (DiscoveryClientNameResolver.this) {
                     resolving = false;
@@ -150,36 +157,35 @@ public class DiscoveryClientNameResolver extends NameResolver {
         @Override
         public void run() {
             synchronized (DiscoveryClientNameResolver.this) {
-                if (!shutdown) {
+                if (!shutdown)
                     executor.execute(resolutionRunnable);
-                }
             }
         }
     };
 
     @GuardedBy("this")
     private void resolve() {
-        if (resolving || shutdown) {
+        if (resolving || shutdown)
             return;
-        }
+
         executor.execute(resolutionRunnable);
     }
 
     @Override
     public void shutdown() {
-        if (shutdown) {
+        if (shutdown)
             return;
-        }
+
         shutdown = true;
-        if (resolutionTask != null) {
+        if (resolutionTask != null)
             resolutionTask.cancel(false);
-        }
-        if (timerService != null) {
+
+        if (timerService != null)
             timerService = SharedResourceHolder.release(timerServiceResource, timerService);
-        }
-        if (executor != null) {
+
+        if (executor != null)
             executor = SharedResourceHolder.release(executorResource, executor);
-        }
+
     }
 
 }

@@ -1,11 +1,16 @@
 package com.dimageshare.configuration.property;
 
-import java.util.HashMap;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.NestedConfigurationProperty;
 
+import java.util.HashMap;
 import java.util.Map;
 
+/**@author bac-ta
+ *
+ * This class do get/set grpc channel
+ *
+ * */
 @ConfigurationProperties("grpc.client")
 public class GrpcChannelPropertiesDo {
 
@@ -14,9 +19,9 @@ public class GrpcChannelPropertiesDo {
 
     public GrpcChannelProperties getChannel(String name) {
         GrpcChannelProperties channel = channels.get(name);
-        if (channel == null) {
+        if (channel == null)
             return GrpcChannelProperties.DEFAULT_CHANNEL;
-        }
+
         return channel;
     }
 

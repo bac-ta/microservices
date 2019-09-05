@@ -10,6 +10,7 @@ import io.grpc.ClientInterceptors;
 import io.grpc.LoadBalancer;
 import io.grpc.NameResolver;
 import io.grpc.netty.NettyChannelBuilder;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
@@ -17,6 +18,9 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * @author bac-ta
+ */
 public class AddressChannelFactory implements GrpcChannelFactory {
 
     private final GrpcChannelPropertiesDo properties;
@@ -34,7 +38,8 @@ public class AddressChannelFactory implements GrpcChannelFactory {
         this.nameResolverFactory = new AddressChannelResolverProvider(properties);
     }
 
-    @Override public Channel createChannel(String name, List<ClientInterceptor> interceptors) {
+    @Override
+    public Channel createChannel(String name, List<ClientInterceptor> interceptors) {
         GrpcChannelProperties channelProperties = properties.getChannel(name);
         NettyChannelBuilder builder = NettyChannelBuilder.forTarget(name)
                 .loadBalancerFactory(loadBalancerFactory)
@@ -51,12 +56,12 @@ public class AddressChannelFactory implements GrpcChannelFactory {
 
         Collection<ClientInterceptor> globalInterceptors = interceptorContext.getClientInterceptors();
         Set<ClientInterceptor> interceptorSet = new HashSet<>();
-        if (globalInterceptors != null && !globalInterceptors.isEmpty()) {
+        if (globalInterceptors != null && !globalInterceptors.isEmpty())
             interceptorSet.addAll(globalInterceptors);
-        }
-        if (interceptors != null && !interceptors.isEmpty()) {
+
+        if (interceptors != null && !interceptors.isEmpty())
             interceptorSet.addAll(interceptors);
-        }
+
 
         return ClientInterceptors.intercept(channel, new ArrayList<>(interceptorSet));
     }

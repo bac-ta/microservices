@@ -10,11 +10,18 @@ import io.grpc.ClientInterceptor;
 import io.grpc.ClientInterceptors;
 import io.grpc.LoadBalancer;
 import io.grpc.ManagedChannelBuilder;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 
+/**
+ * @author bac-ta
+ * <p>
+ * This class do handle for create channel
+ */
 public class DiscoveryClientChannelProvider implements GrpcChannelFactory {
     private final GrpcChannelPropertiesDo channels;
     private final DiscoveryClient client;
@@ -32,7 +39,8 @@ public class DiscoveryClientChannelProvider implements GrpcChannelFactory {
         this.interceptorContext = interceptorContext;
     }
 
-    @Override public Channel createChannel(String name, List<ClientInterceptor> interceptors) {
+    @Override
+    public Channel createChannel(String name, List<ClientInterceptor> interceptors) {
         GrpcChannelProperties channelProperties = channels.getChannel(name);
         Channel channel = ManagedChannelBuilder.forTarget(name)
                 .loadBalancerFactory(loadBalancerFactory)

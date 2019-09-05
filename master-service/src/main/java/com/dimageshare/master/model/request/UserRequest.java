@@ -2,6 +2,7 @@ package com.dimageshare.master.model.request;
 
 import lombok.Data;
 
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 
 @Data
@@ -11,6 +12,7 @@ public class UserRequest {
     private Integer gender;
     @NotBlank
     private String email;
+    @Valid
     private Integer age;
     @NotBlank
     private String phoneNumber;

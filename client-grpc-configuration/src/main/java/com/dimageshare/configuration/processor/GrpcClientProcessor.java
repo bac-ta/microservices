@@ -1,16 +1,9 @@
 package com.dimageshare.configuration.processor;
 
-import com.dimageshare.configuration.interceptor.GrpcClient;
 import com.dimageshare.configuration.factory.GrpcChannelFactory;
+import com.dimageshare.configuration.interceptor.GrpcClient;
 import io.grpc.Channel;
 import io.grpc.ClientInterceptor;
-import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanCreationException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +11,14 @@ import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.util.ReflectionUtils;
+
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class GrpcClientProcessor implements BeanPostProcessor {
 
@@ -32,34 +33,36 @@ public class GrpcClientProcessor implements BeanPostProcessor {
     public GrpcClientProcessor() {
     }
 
-    @Override public Object postProcessBeforeInitialization(Object bean, String beanName)
+    @Override
+    public Object postProcessBeforeInitialization(Object bean, String beanName)
             throws BeansException {
 
-        Class clazz = bean.getClass();
+        Class cls = bean.getClass();
         do {
-            for (Field field: clazz.getDeclaredFields()) {
+            for (Field field : cls.getDeclaredFields()) {
                 if (field.isAnnotationPresent(GrpcClient.class)) {
-                    if (!beansToProcess.containsKey(beanName)) {
+                    if (!beansToProcess.containsKey(beanName))
                         beansToProcess.put(beanName, new ArrayList<>());
-                    }
-                    beansToProcess.get(beanName).add(clazz);
+
+                    beansToProcess.get(beanName).add(cls);
                 }
             }
-            clazz = clazz.getSuperclass();
-        } while (clazz != null);
+            cls = cls.getSuperclass();
+        } while (cls != null);
 
         return bean;
     }
 
-    @Override public Object postProcessAfterInitialization(Object bean, String beanName)
+    @Override
+    public Object postProcessAfterInitialization(Object bean, String beanName)
             throws BeansException {
 
         if (!beansToProcess.containsKey(beanName)) {
             return bean;
         }
 
-        for (Class clazz : beansToProcess.get(beanName)) {
-            for (Field field : clazz.getDeclaredFields()) {
+        for (Class cls : beansToProcess.get(beanName)) {
+            for (Field field : cls.getDeclaredFields()) {
                 GrpcClient grpcClient = AnnotationUtils.getAnnotation(field, GrpcClient.class);
                 if (null != grpcClient) {
                     Channel channel = channelFactory.createChannel(grpcClient.value(),

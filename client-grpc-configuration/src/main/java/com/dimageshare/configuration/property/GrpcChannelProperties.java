@@ -2,7 +2,11 @@ package com.dimageshare.configuration.property;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**@author bac-ta
+ *
+ * This class provide grpc channel attributte
+ *
+ * */
 public class GrpcChannelProperties {
 
     static final GrpcChannelProperties DEFAULT_CHANNEL = new GrpcChannelProperties();
