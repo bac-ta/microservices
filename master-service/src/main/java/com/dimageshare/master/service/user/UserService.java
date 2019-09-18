@@ -8,6 +8,7 @@ import com.dimageshare.protobuf.core.autogen.grpc.user.Gender;
 import com.dimageshare.protobuf.core.autogen.grpc.user.User;
 import com.dimageshare.protobuf.core.autogen.grpc.user.UserIdRequest;
 import com.dimageshare.protobuf.core.autogen.grpc.user.UserResponses;
+import com.dimageshare.protobuf.core.autogen.grpc.user.UserSaving;
 import com.dimageshare.protobuf.core.autogen.grpc.user.UserServiceGrpc;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.protobuf.Empty;
@@ -28,11 +29,7 @@ public class UserService {
         this.channel = channel;
     }
 
-    public UserService() {
-        super();
-    }
-
-    public UserServiceGrpc.UserServiceBlockingStub getStub() {
+    private UserServiceGrpc.UserServiceBlockingStub getStub() {
         return UserServiceGrpc.newBlockingStub(channel);
     }
 
@@ -47,8 +44,7 @@ public class UserService {
         String phoneNumber = user.getPhoneNumber();
         int departmentId = user.getDepartmentId();
 
-        UserResponse response = new UserResponse(id, name, gender, email, age, phoneNumber, departmentId);
-        return response;
+        return new UserResponse(id, name, gender, email, age, phoneNumber, departmentId);
     }
 
     public List<UserResponse> findAll() {
@@ -110,7 +106,7 @@ public class UserService {
         String phoneNumber = request.getPhoneNumber();
         int departmentId = request.getDepartmentId();
 
-        User user = User.newBuilder().setName(name).setEmail(email).setAge(age).setGender(gender)
+        UserSaving user = UserSaving.newBuilder().setName(name).setEmail(email).setAge(age).setGender(gender)
                 .setPhoneNumber(phoneNumber).setDepartmentId(departmentId).build();
 
         stub.saveUser(user);

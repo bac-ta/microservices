@@ -3,7 +3,9 @@ package com.dimageshare.department.service;
 import com.dimageshare.department.entity.DepartmentEntity;
 import com.dimageshare.department.repository.DepartmentRepository;
 import com.dimageshare.protobuf.core.autogen.grpc.department.Department;
-import com.dimageshare.protobuf.core.autogen.grpc.user.DepartmentIdRequest;
+import com.dimageshare.protobuf.core.autogen.grpc.department.DepartmentIdRequest;
+import com.dimageshare.protobuf.core.autogen.grpc.department.DepartmentResponses;
+import com.dimageshare.protobuf.core.autogen.grpc.department.DepartmentSaving;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,29 +25,32 @@ public class DepartmentService {
     }
 
     public Department findById(DepartmentIdRequest request) {
-        int id = request.getDepartmentId();
+        int id = request.getId();
         logger.info("DepartmentEntity Id: " + id);
         DepartmentEntity entity = departmentRepository.findById(id);
         return entity.initDepartment(entity);
     }
 
-    public List<Department> findAllDepartments() {
+    public DepartmentResponses findAllDepartments() {
         List<DepartmentEntity> entities = departmentRepository.findAll();
-        return entities.stream().map(entity -> {
+        List<Department> departments = entities.stream().map(entity -> {
             return entity.initDepartment(entity);
         }).collect(Collectors.toList());
+
+        return DepartmentResponses.newBuilder().addAllDepartment(departments).build();
     }
 
-    public boolean saveDepartment(Department department) {
+    public void saveDepartment(DepartmentSaving department) {
         DepartmentEntity entity = new DepartmentEntity(department);
-        DepartmentEntity entitySave = departmentRepository.save(entity);
-        if (entitySave == null)
-            return false;
-        return true;
+        try {
+            departmentRepository.save(entity);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void removeById(DepartmentIdRequest request) {
-        int id = request.getDepartmentId();
+        int id = request.getId();
         logger.info("Department Id: " + id);
         departmentRepository.removeById(id);
     }

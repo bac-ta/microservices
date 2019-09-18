@@ -4,8 +4,8 @@ import com.dimageshare.protobuf.core.autogen.grpc.user.DepartmentIdRequest;
 import com.dimageshare.protobuf.core.autogen.grpc.user.User;
 import com.dimageshare.protobuf.core.autogen.grpc.user.UserIdRequest;
 import com.dimageshare.protobuf.core.autogen.grpc.user.UserResponses;
+import com.dimageshare.protobuf.core.autogen.grpc.user.UserSaving;
 import com.dimageshare.user.entity.UserEntity;
-import com.dimageshare.user.message.ErrorMessage;
 import com.dimageshare.user.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -50,12 +50,13 @@ public class UserService {
         return UserResponses.newBuilder().addAllUser(users).build();
     }
 
-    public void saveUser(User user) throws Exception {
+    public void saveUser(UserSaving user) {
         UserEntity entity = new UserEntity(user);
-        UserEntity entitySave = userRepository.save(entity);
-        if (entitySave == null)
-            throw new Exception(ErrorMessage.SAVE_USER_ERROR);
-
+        try {
+            userRepository.save(entity);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void removeUserById(UserIdRequest request) {

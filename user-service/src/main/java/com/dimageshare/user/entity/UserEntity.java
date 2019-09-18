@@ -2,6 +2,7 @@ package com.dimageshare.user.entity;
 
 import com.dimageshare.protobuf.core.autogen.grpc.user.Gender;
 import com.dimageshare.protobuf.core.autogen.grpc.user.User;
+import com.dimageshare.protobuf.core.autogen.grpc.user.UserSaving;
 import com.dimageshare.user.enumeration.GenderEnum;
 import lombok.Data;
 
@@ -56,8 +57,7 @@ public class UserEntity {
                 .build();
     }
 
-    public UserEntity(User user) {
-        this.id = user.getId();
+    public UserEntity(UserSaving user) {
         this.name = user.getName();
         Gender gender = user.getGender();
         this.genderEnum = GenderEnum.findByCode(gender.getNumber());

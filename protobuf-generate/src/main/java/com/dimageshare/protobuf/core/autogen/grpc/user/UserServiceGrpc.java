@@ -140,32 +140,32 @@ public final class UserServiceGrpc {
   }
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
   @java.lang.Deprecated // Use {@link #getSaveUserMethod()} instead. 
-  public static final io.grpc.MethodDescriptor<com.dimageshare.protobuf.core.autogen.grpc.user.User,
+  public static final io.grpc.MethodDescriptor<com.dimageshare.protobuf.core.autogen.grpc.user.UserSaving,
       com.google.protobuf.Empty> METHOD_SAVE_USER = getSaveUserMethodHelper();
 
-  private static volatile io.grpc.MethodDescriptor<com.dimageshare.protobuf.core.autogen.grpc.user.User,
+  private static volatile io.grpc.MethodDescriptor<com.dimageshare.protobuf.core.autogen.grpc.user.UserSaving,
       com.google.protobuf.Empty> getSaveUserMethod;
 
   @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/1901")
-  public static io.grpc.MethodDescriptor<com.dimageshare.protobuf.core.autogen.grpc.user.User,
+  public static io.grpc.MethodDescriptor<com.dimageshare.protobuf.core.autogen.grpc.user.UserSaving,
       com.google.protobuf.Empty> getSaveUserMethod() {
     return getSaveUserMethodHelper();
   }
 
-  private static io.grpc.MethodDescriptor<com.dimageshare.protobuf.core.autogen.grpc.user.User,
+  private static io.grpc.MethodDescriptor<com.dimageshare.protobuf.core.autogen.grpc.user.UserSaving,
       com.google.protobuf.Empty> getSaveUserMethodHelper() {
-    io.grpc.MethodDescriptor<com.dimageshare.protobuf.core.autogen.grpc.user.User, com.google.protobuf.Empty> getSaveUserMethod;
+    io.grpc.MethodDescriptor<com.dimageshare.protobuf.core.autogen.grpc.user.UserSaving, com.google.protobuf.Empty> getSaveUserMethod;
     if ((getSaveUserMethod = UserServiceGrpc.getSaveUserMethod) == null) {
       synchronized (UserServiceGrpc.class) {
         if ((getSaveUserMethod = UserServiceGrpc.getSaveUserMethod) == null) {
           UserServiceGrpc.getSaveUserMethod = getSaveUserMethod = 
-              io.grpc.MethodDescriptor.<com.dimageshare.protobuf.core.autogen.grpc.user.User, com.google.protobuf.Empty>newBuilder()
+              io.grpc.MethodDescriptor.<com.dimageshare.protobuf.core.autogen.grpc.user.UserSaving, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(
                   "user.UserService", "saveUser"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.dimageshare.protobuf.core.autogen.grpc.user.User.getDefaultInstance()))
+                  com.dimageshare.protobuf.core.autogen.grpc.user.UserSaving.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
                   .setSchemaDescriptor(new UserServiceMethodDescriptorSupplier("saveUser"))
@@ -263,7 +263,7 @@ public final class UserServiceGrpc {
 
     /**
      */
-    public void saveUser(com.dimageshare.protobuf.core.autogen.grpc.user.User request,
+    public void saveUser(com.dimageshare.protobuf.core.autogen.grpc.user.UserSaving request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnimplementedUnaryCall(getSaveUserMethodHelper(), responseObserver);
     }
@@ -302,7 +302,7 @@ public final class UserServiceGrpc {
             getSaveUserMethodHelper(),
             asyncUnaryCall(
               new MethodHandlers<
-                com.dimageshare.protobuf.core.autogen.grpc.user.User,
+                com.dimageshare.protobuf.core.autogen.grpc.user.UserSaving,
                 com.google.protobuf.Empty>(
                   this, METHODID_SAVE_USER)))
           .addMethod(
@@ -360,7 +360,7 @@ public final class UserServiceGrpc {
 
     /**
      */
-    public void saveUser(com.dimageshare.protobuf.core.autogen.grpc.user.User request,
+    public void saveUser(com.dimageshare.protobuf.core.autogen.grpc.user.UserSaving request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getSaveUserMethodHelper(), getCallOptions()), request, responseObserver);
@@ -416,7 +416,7 @@ public final class UserServiceGrpc {
 
     /**
      */
-    public com.google.protobuf.Empty saveUser(com.dimageshare.protobuf.core.autogen.grpc.user.User request) {
+    public com.google.protobuf.Empty saveUser(com.dimageshare.protobuf.core.autogen.grpc.user.UserSaving request) {
       return blockingUnaryCall(
           getChannel(), getSaveUserMethodHelper(), getCallOptions(), request);
     }
@@ -474,7 +474,7 @@ public final class UserServiceGrpc {
     /**
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> saveUser(
-        com.dimageshare.protobuf.core.autogen.grpc.user.User request) {
+        com.dimageshare.protobuf.core.autogen.grpc.user.UserSaving request) {
       return futureUnaryCall(
           getChannel().newCall(getSaveUserMethodHelper(), getCallOptions()), request);
     }
@@ -524,7 +524,7 @@ public final class UserServiceGrpc {
               (io.grpc.stub.StreamObserver<com.dimageshare.protobuf.core.autogen.grpc.user.UserResponses>) responseObserver);
           break;
         case METHODID_SAVE_USER:
-          serviceImpl.saveUser((com.dimageshare.protobuf.core.autogen.grpc.user.User) request,
+          serviceImpl.saveUser((com.dimageshare.protobuf.core.autogen.grpc.user.UserSaving) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
         case METHODID_REMOVE_USER_BY_ID:

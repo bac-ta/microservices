@@ -5,6 +5,7 @@ import com.dimageshare.protobuf.core.autogen.grpc.user.DepartmentIdRequest;
 import com.dimageshare.protobuf.core.autogen.grpc.user.User;
 import com.dimageshare.protobuf.core.autogen.grpc.user.UserIdRequest;
 import com.dimageshare.protobuf.core.autogen.grpc.user.UserResponses;
+import com.dimageshare.protobuf.core.autogen.grpc.user.UserSaving;
 import com.dimageshare.protobuf.core.autogen.grpc.user.UserServiceGrpc;
 import com.dimageshare.user.service.UserService;
 import com.google.protobuf.Empty;
@@ -49,7 +50,7 @@ public class UserGrpcServer extends UserServiceGrpc.UserServiceImplBase {
     }
 
     @Override
-    public void saveUser(User request, StreamObserver<Empty> responseObserver) {
+    public void saveUser(UserSaving request, StreamObserver<Empty> responseObserver) {
         service.saveUser(request);
         responseObserver.onNext(Empty.getDefaultInstance());
         responseObserver.onCompleted();

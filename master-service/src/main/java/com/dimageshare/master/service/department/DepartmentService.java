@@ -6,6 +6,7 @@ import com.dimageshare.master.model.response.DepartmentResponse;
 import com.dimageshare.protobuf.core.autogen.grpc.department.Department;
 import com.dimageshare.protobuf.core.autogen.grpc.department.DepartmentIdRequest;
 import com.dimageshare.protobuf.core.autogen.grpc.department.DepartmentResponses;
+import com.dimageshare.protobuf.core.autogen.grpc.department.DepartmentSaving;
 import com.dimageshare.protobuf.core.autogen.grpc.department.DepartmentServiceGrpc;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.protobuf.Empty;
@@ -56,11 +57,11 @@ public class DepartmentService {
         stub.removeDepartmentById(request);
     }
 
-    public void saveDepartment(DepartmentRequest request){
-        stub =getStub();
+    public void saveDepartment(DepartmentRequest request) {
+        stub = getStub();
         String name = request.getName();
-        String description =request.getDescription();
-        Department department = Department.newBuilder().setName(name).setDescription(description).build();
-
+        String description = request.getDescription();
+        DepartmentSaving department = DepartmentSaving.newBuilder().setName(name).setDescription(description).build();
+        stub.saveDepartment(department);
     }
 }

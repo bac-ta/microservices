@@ -1,6 +1,7 @@
 package com.dimageshare.department.entity;
 
 import com.dimageshare.protobuf.core.autogen.grpc.department.Department;
+import com.dimageshare.protobuf.core.autogen.grpc.department.DepartmentSaving;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -24,8 +25,7 @@ public class DepartmentEntity {
 
     }
 
-    public DepartmentEntity(Department department) {
-        this.id = department.getId();
+    public DepartmentEntity(DepartmentSaving department) {
         this.name = department.getName();
         this.description = department.getDescription();
     }

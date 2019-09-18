@@ -14,6 +14,16 @@ message User {
     string phoneNumber = 6;
     int32 departmentId = 7;
 }
+
+message UserSaving {
+    string name = 1;
+    Gender gender = 2;
+    string email = 3;
+    int32 age = 4;
+    string phoneNumber = 5;
+    int32 departmentId = 6;
+}
+
 enum Gender {
     MALE = 0;
     FEMALE = 1;
@@ -36,6 +46,6 @@ service UserService {
     rpc findUsers (google.protobuf.Empty) returns (UserResponses);
     rpc findUserById (UserIdRequest) returns (User);
     rpc findUserByDepartmentId (DepartmentIdRequest) returns (UserResponses);
-    rpc saveUser (User) returns (google.protobuf.Empty);
+    rpc saveUser (UserSaving) returns (google.protobuf.Empty);
     rpc removeUserById (UserIdRequest) returns (google.protobuf.Empty);
 }

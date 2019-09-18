@@ -20,6 +20,11 @@ public final class UserOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_user_User_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_user_UserSaving_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_user_UserSaving_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_user_UserIdRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -47,20 +52,24 @@ public final class UserOuterClass {
       "y.proto\"\205\001\n\004User\022\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \001" +
       "(\t\022\034\n\006gender\030\003 \001(\0162\014.user.Gender\022\r\n\005emai" +
       "l\030\004 \001(\t\022\013\n\003age\030\005 \001(\005\022\023\n\013phoneNumber\030\006 \001(" +
-      "\t\022\024\n\014departmentId\030\007 \001(\005\"\033\n\rUserIdRequest" +
-      "\022\n\n\002id\030\001 \001(\005\")\n\rUserResponses\022\030\n\004user\030\001 " +
-      "\003(\0132\n.user.User\"+\n\023DepartmentIdRequest\022\024" +
-      "\n\014departmentId\030\001 \001(\005*)\n\006Gender\022\010\n\004MALE\020\000" +
-      "\022\n\n\006FEMALE\020\001\022\t\n\005OTHER\020\0022\261\002\n\013UserService\022" +
-      "8\n\tfindUsers\022\026.google.protobuf.Empty\032\023.u" +
-      "ser.UserResponses\022/\n\014findUserById\022\023.user" +
-      ".UserIdRequest\032\n.user.User\022H\n\026findUserBy" +
-      "DepartmentId\022\031.user.DepartmentIdRequest\032" +
-      "\023.user.UserResponses\022.\n\010saveUser\022\n.user." +
-      "User\032\026.google.protobuf.Empty\022=\n\016removeUs" +
-      "erById\022\023.user.UserIdRequest\032\026.google.pro" +
-      "tobuf.EmptyB3\n/com.dimageshare.protobuf." +
-      "core.autogen.grpc.userP\001b\006proto3"
+      "\t\022\024\n\014departmentId\030\007 \001(\005\"\177\n\nUserSaving\022\014\n" +
+      "\004name\030\001 \001(\t\022\034\n\006gender\030\002 \001(\0162\014.user.Gende" +
+      "r\022\r\n\005email\030\003 \001(\t\022\013\n\003age\030\004 \001(\005\022\023\n\013phoneNu" +
+      "mber\030\005 \001(\t\022\024\n\014departmentId\030\006 \001(\005\"\033\n\rUser" +
+      "IdRequest\022\n\n\002id\030\001 \001(\005\")\n\rUserResponses\022\030" +
+      "\n\004user\030\001 \003(\0132\n.user.User\"+\n\023DepartmentId" +
+      "Request\022\024\n\014departmentId\030\001 \001(\005*)\n\006Gender\022" +
+      "\010\n\004MALE\020\000\022\n\n\006FEMALE\020\001\022\t\n\005OTHER\020\0022\267\002\n\013Use" +
+      "rService\0228\n\tfindUsers\022\026.google.protobuf." +
+      "Empty\032\023.user.UserResponses\022/\n\014findUserBy" +
+      "Id\022\023.user.UserIdRequest\032\n.user.User\022H\n\026f" +
+      "indUserByDepartmentId\022\031.user.DepartmentI" +
+      "dRequest\032\023.user.UserResponses\0224\n\010saveUse" +
+      "r\022\020.user.UserSaving\032\026.google.protobuf.Em" +
+      "pty\022=\n\016removeUserById\022\023.user.UserIdReque" +
+      "st\032\026.google.protobuf.EmptyB3\n/com.dimage" +
+      "share.protobuf.core.autogen.grpc.userP\001b" +
+      "\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -81,20 +90,26 @@ public final class UserOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_user_User_descriptor,
         new java.lang.String[] { "Id", "Name", "Gender", "Email", "Age", "PhoneNumber", "DepartmentId", });
-    internal_static_user_UserIdRequest_descriptor =
+    internal_static_user_UserSaving_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_user_UserSaving_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_user_UserSaving_descriptor,
+        new java.lang.String[] { "Name", "Gender", "Email", "Age", "PhoneNumber", "DepartmentId", });
+    internal_static_user_UserIdRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_user_UserIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_user_UserIdRequest_descriptor,
         new java.lang.String[] { "Id", });
     internal_static_user_UserResponses_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_user_UserResponses_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_user_UserResponses_descriptor,
         new java.lang.String[] { "User", });
     internal_static_user_DepartmentIdRequest_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_user_DepartmentIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_user_DepartmentIdRequest_descriptor,
