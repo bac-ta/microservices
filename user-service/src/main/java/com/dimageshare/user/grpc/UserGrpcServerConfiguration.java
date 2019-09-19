@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class GrpcServerConfiguration {
+public class UserGrpcServerConfiguration {
     @Bean
     public ServerInterceptorInitializer globalServerInterceptorInitializer() {
         return () -> Lists.newArrayList(
