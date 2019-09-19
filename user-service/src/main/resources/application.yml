@@ -20,7 +20,7 @@ max-age: 3600
 #Config grpc server
 grpc:
   server:
-    port: ${GRPC_SERVER_PORT:52060}
+    port: ${GRPC_SERVER_PORT:55993}
 
 security:
   basic:
