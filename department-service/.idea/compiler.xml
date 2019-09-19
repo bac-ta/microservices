@@ -15,5 +15,14 @@
         <module name="user-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="client-grpc-configuration" target="1.8" />
+      <module name="entropydb" target="1.8" />
+      <module name="framework-handler" target="1.8" />
+      <module name="master-service (1) (com.dimageshare)" target="1.8" />
+      <module name="protobuf-generate" target="1.8" />
+      <module name="server-grpc-configuration" target="1.8" />
+      <module name="service-demo" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

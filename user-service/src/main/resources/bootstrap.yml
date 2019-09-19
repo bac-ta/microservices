@@ -1,7 +1,7 @@
 ---
 spring:
   application:
-    name: department
+    name: user
   cloud:
     config:
       name: app

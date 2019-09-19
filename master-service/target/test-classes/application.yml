@@ -1,0 +1,14 @@
+grpc:
+  server:
+    port: ${GRPC_SERVER_PORT:55555}
+  client:
+    channels:
+      user:
+        hosts:
+        - ${GRPC_MASTER_HOST:localhost}
+        ports:
+        - ${GRPC_MASTER_PORT:55993}
+      department:
+        hosts:
+        - ${GRPC_MASTER_HOST:localhost}
+        - ${GRPC_MASTER_PORT:11994}

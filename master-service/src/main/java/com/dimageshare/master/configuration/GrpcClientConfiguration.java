@@ -1,8 +1,8 @@
 package com.dimageshare.master.configuration;
 
-import com.dimageshare.configuration.interceptor.ClientInterceptorInitializer;
-import com.dimageshare.frameworkhandler.grpc.GrpcHeaderClientInterceptor;
 import com.google.common.collect.Lists;
+import demo.service.framework.grpc.GrpcHeaderClientInterceptor;
+import demo.spring.boot.grpc.client.ClientInterceptorInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

@@ -1,6 +1,5 @@
 package com.dimageshare.master.service.department;
 
-import com.dimageshare.configuration.interceptor.GrpcClient;
 import com.dimageshare.master.model.request.DepartmentRequest;
 import com.dimageshare.master.model.response.DepartmentResponse;
 import com.dimageshare.protobuf.core.autogen.grpc.department.Department;
@@ -10,11 +9,14 @@ import com.dimageshare.protobuf.core.autogen.grpc.department.DepartmentSaving;
 import com.dimageshare.protobuf.core.autogen.grpc.department.DepartmentServiceGrpc;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.protobuf.Empty;
+import demo.spring.boot.grpc.client.GrpcClient;
 import io.grpc.Channel;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 public class DepartmentService {
     @GrpcClient("department")
     private Channel channel;
@@ -45,7 +47,6 @@ public class DepartmentService {
     public List<DepartmentResponse> findAll() {
         stub = getStub();
         DepartmentResponses departments = stub.findDepartments(Empty.getDefaultInstance());
-
         return departments.getDepartmentList().stream().map(el -> {
             return new DepartmentResponse(el.getId(), el.getName(), el.getDescription());
         }).collect(Collectors.toList());

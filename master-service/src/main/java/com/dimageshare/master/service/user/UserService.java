@@ -1,6 +1,5 @@
 package com.dimageshare.master.service.user;
 
-import com.dimageshare.configuration.interceptor.GrpcClient;
 import com.dimageshare.master.model.request.UserRequest;
 import com.dimageshare.master.model.response.UserResponse;
 import com.dimageshare.protobuf.core.autogen.grpc.user.DepartmentIdRequest;
@@ -12,6 +11,7 @@ import com.dimageshare.protobuf.core.autogen.grpc.user.UserSaving;
 import com.dimageshare.protobuf.core.autogen.grpc.user.UserServiceGrpc;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.protobuf.Empty;
+import demo.spring.boot.grpc.client.GrpcClient;
 import io.grpc.Channel;
 import org.springframework.stereotype.Service;
 
@@ -20,13 +20,17 @@ import java.util.stream.Collectors;
 
 @Service
 public class UserService {
-    @GrpcClient("department")
+    @GrpcClient("user")
     private Channel channel;
     private UserServiceGrpc.UserServiceBlockingStub stub;
 
     @VisibleForTesting
-    protected UserService(final Channel channel) {
+    protected UserService(Channel channel) {
         this.channel = channel;
+    }
+
+    public UserService() {
+        super();
     }
 
     private UserServiceGrpc.UserServiceBlockingStub getStub() {

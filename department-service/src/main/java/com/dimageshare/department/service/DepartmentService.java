@@ -33,6 +33,9 @@ public class DepartmentService {
 
     public DepartmentResponses findAllDepartments() {
         List<DepartmentEntity> entities = departmentRepository.findAll();
+        if (entities.isEmpty())
+            return DepartmentResponses.getDefaultInstance();
+
         List<Department> departments = entities.stream().map(entity -> {
             return entity.initDepartment(entity);
         }).collect(Collectors.toList());

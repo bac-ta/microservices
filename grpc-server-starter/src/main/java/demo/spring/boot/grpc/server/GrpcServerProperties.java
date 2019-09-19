@@ -1,5 +1,6 @@
 package demo.spring.boot.grpc.server;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties("rpc.server")
@@ -37,10 +38,10 @@ public class GrpcServerProperties {
             this.certificatePath = certificatePath;
         }
     }
-
-    private int port = 50051;
-
-    private String address = "0.0.0.0";
+    @Value("${grpc.server.port}")
+    private int port;
+    @Value("${grpc.server.address}")
+    private String address;
 
     private final Security security = new Security();
 

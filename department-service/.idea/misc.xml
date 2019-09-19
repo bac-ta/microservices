@@ -9,8 +9,9 @@
         <option value="$PROJECT_DIR$/../grpc-client-starter/pom.xml" />
         <option value="$PROJECT_DIR$/../protobuf/pom.xml" />
         <option value="$PROJECT_DIR$/../service-framework/pom.xml" />
-        <option value="$PROJECT_DIR$/../department-service/pom.xml" />
         <option value="$PROJECT_DIR$/../grpc-server-starter/pom.xml" />
+        <option value="$PROJECT_DIR$/../user-service/pom.xml" />
+        <option value="$PROJECT_DIR$/../master-service2/pom.xml" />
       </list>
     </option>
   </component>

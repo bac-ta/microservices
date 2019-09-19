@@ -1,4 +1,3 @@
-
 #Config db
 spring:
   datasource:
@@ -16,11 +15,11 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
 
-max-age: 3600
 
 grpc:
   server:
-    port: ${GRPC_SERVER_PORT:55993}
+    port: ${GRPC_SERVER_PORT:55593}
+    address: 0.0.0.0
 
 security:
   basic:

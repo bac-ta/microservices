@@ -10,7 +10,7 @@ spring:
     database: mysql
     show-sql: true
     hibernate:
-      ddl-auto: validate
+      ddl-auto: update
       naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
     properties:
       hibernate:
@@ -21,6 +21,7 @@ max-age: 3600
 grpc:
   server:
     port: ${GRPC_SERVER_PORT:11994}
+    address: 0.0.0.0
 
 security:
   basic:
