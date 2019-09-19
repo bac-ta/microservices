@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.dimageshare.user","com.dimageshare.user.service", "com.dimageshare.user.entity"})
+@ComponentScan(basePackages = {"com.dimageshare.user","com.dimageshare.user.service"})
 @EnableJpaRepositories({"com.dimageshare.user.repository"})
 public class UserServiceApplication {
 
