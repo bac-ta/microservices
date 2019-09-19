@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.dimageshare</groupId>
-    <artifactId>userEntity-service</artifactId>
+    <artifactId>user-service</artifactId>
     <version>0.0.1</version>
-    <name>userEntity-service</name>
-    <description>Service userEntity</description>
+    <name>user-service</name>
+    <description>Service User</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
