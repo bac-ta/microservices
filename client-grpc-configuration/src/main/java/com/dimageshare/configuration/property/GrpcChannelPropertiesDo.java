@@ -1,6 +1,6 @@
 package com.dimageshare.configuration.property;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.context.properties.NestedConfigurationProperty;
 
 import java.util.HashMap;
@@ -11,7 +11,7 @@ import java.util.Map;
  * This class do get/set grpc channel
  *
  * */
-@ConfigurationProperties("grpc.client")
+@EnableConfigurationProperties
 public class GrpcChannelPropertiesDo {
 
     @NestedConfigurationProperty

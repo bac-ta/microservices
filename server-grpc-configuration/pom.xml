@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.7.RELEASE</version>
+        <version>1.5.4.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.dimageshare</groupId>
@@ -14,24 +14,27 @@
     <name>server-grpc-configuration</name>
     <description>Config grpc for microservice server</description>
 
+
     <properties>
-        <java.version>1.8</java.version>
-        <grpc.version>1.10.1</grpc.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <spring.boot.version>1.5.4.RELEASE</spring.boot.version>
+        <spring.cloud.version>Dalston.SR1</spring.cloud.version>
+        <grpc.version>1.10.1</grpc.version>
     </properties>
-
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure</artifactId>
+            <version>${spring.boot.version}</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-logging</artifactId>
+            <version>${spring.boot.version}</version>
             <scope>provided</scope>
         </dependency>
 
@@ -52,11 +55,6 @@
             <artifactId>grpc-stub</artifactId>
             <version>${grpc.version}</version>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
         </dependency>
     </dependencies>
 
