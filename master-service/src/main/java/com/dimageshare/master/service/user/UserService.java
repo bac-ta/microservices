@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
 
 @Service
 public class UserService {
-    @GrpcClient("user")
+    @GrpcClient("department")
     private Channel channel;
     private UserServiceGrpc.UserServiceBlockingStub stub;
 

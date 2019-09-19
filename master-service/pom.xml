@@ -62,14 +62,14 @@
             <artifactId>protobuf-generate</artifactId>
             <version>${protobuf.version}</version>
         </dependency>
-        <!--Server grpc configuration-->
+        <!--Server rpc configuration-->
         <dependency>
             <groupId>com.dimageshare</groupId>
             <artifactId>server-grpc-configuration</artifactId>
             <version>${server.gprc.version}</version>
         </dependency>
 
-        <!--Client grpc configuration-->
+        <!--Client rpc configuration-->
         <dependency>
             <groupId>com.dimageshare</groupId>
             <artifactId>client-grpc-configuration</artifactId>

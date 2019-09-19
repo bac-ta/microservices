@@ -2,11 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>com.dimageshare</groupId>
     <artifactId>user-service</artifactId>
     <version>0.0.1</version>
+    <packaging>jar</packaging>
+
     <name>user-service</name>
-    <description>Service User</description>
+    <description>Demo User Service Project</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -22,15 +25,18 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <spring-cloud.version>Dalston.SR1</spring-cloud.version>
-        <server.gprc.version>0.0.1</server.gprc.version>
-        <protobuf.version>0.0.1</protobuf.version>
-        <framework.handler.version>0.0.1</framework.handler.version>
-        <appName>${project.artifactId}-${project.version}</appName>
         <grpc.version>1.10.1</grpc.version>
+        <protobuf.version>0.1.DEMO</protobuf.version>
+        <framework.version>0.1.DEMO</framework.version>
+        <appName>${project.artifactId}-${project.version}</appName>
     </properties>
 
     <dependencies>
         <!-- springframework -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
@@ -43,55 +49,28 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-        <!-- test -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi</artifactId>
-            <version>4.0.1</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
-            <version>4.0.1</version>
+            <version>3.17</version>
         </dependency>
 
-        <!--Protobuf genreate-->
+        <!-- demo -->
         <dependency>
-            <groupId>demo.protobuf.core</groupId>
-            <artifactId>protobuf-generate</artifactId>
+            <groupId>demo.service</groupId>
+            <artifactId>service-framework</artifactId>
+            <version>${framework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>demo.core</groupId>
+            <artifactId>protobuf-gen</artifactId>
             <version>${protobuf.version}</version>
         </dependency>
-
-        <!--Server grpc configuration-->
         <dependency>
-            <groupId>com.dimageshare</groupId>
-            <artifactId>server-grpc-configuration</artifactId>
-            <version>${server.gprc.version}</version>
-        </dependency>
-
-        <!--Framework handler-->
-        <dependency>
-            <groupId>com.dimageshare</groupId>
-            <artifactId>framework-handler</artifactId>
-            <version>${framework.handler.version}</version>
+            <groupId>demo.spring.boot</groupId>
+            <artifactId>grpc-server-starter</artifactId>
+            <version>0.1.1</version>
         </dependency>
 
         <!-- gRPC -->
@@ -155,6 +134,12 @@
             <version>2.9.9</version>
         </dependency>
 
+        <!-- tools -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -166,6 +151,34 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>3.5</version>
+        </dependency>
+
+        <!-- test -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>4.0.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>4.0.1</version>
+        </dependency>
+
+        <!--For mysql-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
         </dependency>
 
     </dependencies>
