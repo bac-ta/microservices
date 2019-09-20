@@ -1,0 +1,5 @@
+
+£%squid:RedundantThrowsDeclarationCheck2"mRemove the declaration of thrown exception 'java.lang.IllegalArgumentException' which is a runtime exception.(İ°Éùÿÿÿÿ
+ssquid:S1488"\Immediately return this expression instead of assigning it to the temporary variable "hash".(É™ï²
+zsquid:S1488#"^Immediately return this expression instead of assigning it to the temporary variable "result".(ÎåĞúÿÿÿÿ
+vsquid:S1149A"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(í…Ò‰

@@ -12,10 +12,12 @@
         <module name="master-service" />
         <module name="protobuf-gen" />
         <module name="service-framework" />
-        <module name="service-master" />
         <module name="user-service" />
         <module name="user-service (1)" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="service-master" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

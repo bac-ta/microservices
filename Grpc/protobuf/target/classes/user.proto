@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+//import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+
+// =@Do not modify@=
+option java_package = "com.dimageshare.core.autogen.grpc.user";
+option java_multiple_files = true;
+
+package user;
+// =================
+
+service User {
+    rpc GetSum (GetSumRequest) returns (GetSumResponse);
+}
+
+message GetSumRequest {
+    int32 a = 1;
+    int32 b = 2;
+}
+
+message GetSumResponse {
+    int32 sum = 1;
+}

@@ -89,7 +89,7 @@
 
     <!-- demo -->
     <dependency>
-      <groupId>demo.core</groupId>
+      <groupId>com.dimageshare</groupId>
       <artifactId>protobuf-gen</artifactId>
       <version>${protobuf.version}</version>
       <scope>provided</scope>
