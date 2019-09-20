@@ -1,5 +1,4 @@
 package com.dimageshare.master.service;
-
 import com.dimageshare.core.autogen.grpc.user.GetSumRequest;
 import com.dimageshare.core.autogen.grpc.user.GetSumResponse;
 import com.dimageshare.core.autogen.grpc.user.UserGrpc;

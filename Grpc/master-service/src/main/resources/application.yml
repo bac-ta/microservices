@@ -13,6 +13,11 @@ grpc:
         - ${GRPC_MASTER_HOST:localhost}
         ports:
         - ${GRPC_MASTER_PORT:55593}
+      department:
+        hosts:
+          - ${GRPC_MASTER_HOST:localhost}
+        ports:
+          - ${GRPC_MASTER_PORT:11994}
 
 logging:
   level: debug, info
