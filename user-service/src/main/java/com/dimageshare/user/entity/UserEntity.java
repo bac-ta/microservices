@@ -1,8 +1,8 @@
 package com.dimageshare.user.entity;
 
-import com.dimageshare.protobuf.core.autogen.grpc.user.Gender;
-import com.dimageshare.protobuf.core.autogen.grpc.user.User;
-import com.dimageshare.protobuf.core.autogen.grpc.user.UserSaving;
+import com.dimageshare.protobuf.core.autogen.rpc.user.Gender;
+import com.dimageshare.protobuf.core.autogen.rpc.user.User;
+import com.dimageshare.protobuf.core.autogen.rpc.user.UserSaving;
 import com.dimageshare.user.enumeration.GenderEnum;
 import lombok.Data;
 

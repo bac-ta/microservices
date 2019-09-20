@@ -2,10 +2,10 @@ package com.dimageshare.department.service;
 
 import com.dimageshare.department.entity.DepartmentEntity;
 import com.dimageshare.department.repository.DepartmentRepository;
-import com.dimageshare.protobuf.core.autogen.grpc.department.Department;
-import com.dimageshare.protobuf.core.autogen.grpc.department.DepartmentIdRequest;
-import com.dimageshare.protobuf.core.autogen.grpc.department.DepartmentResponses;
-import com.dimageshare.protobuf.core.autogen.grpc.department.DepartmentSaving;
+import com.dimageshare.protobuf.core.autogen.rpc.department.Department;
+import com.dimageshare.protobuf.core.autogen.rpc.department.DepartmentIdRequest;
+import com.dimageshare.protobuf.core.autogen.rpc.department.DepartmentResponses;
+import com.dimageshare.protobuf.core.autogen.rpc.department.DepartmentSaving;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

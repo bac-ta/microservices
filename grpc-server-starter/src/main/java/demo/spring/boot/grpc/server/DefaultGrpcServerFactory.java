@@ -3,15 +3,12 @@ package demo.spring.boot.grpc.server;
 import com.google.common.net.InetAddresses;
 import io.grpc.Server;
 import io.grpc.netty.NettyServerBuilder;
-
 import java.io.File;
 import java.net.InetSocketAddress;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.springframework.util.StringUtils;
 
 public class DefaultGrpcServerFactory implements GrpcServerFactory {
 
@@ -26,19 +23,13 @@ public class DefaultGrpcServerFactory implements GrpcServerFactory {
 
     @Override
     public Server createServer() {
-        String address = properties.getAddress();
-        if (StringUtils.isEmpty(address))
-            address = "0.0.0.0";
-
-        int port = properties.getPort();
-        if (StringUtils.isEmpty(port))
-            port = 99999;
-
+        final String address = properties.getAddress();
+        final int port = properties.getPort();
         final GrpcServerProperties.Security security = properties.getSecurity();
 
         NettyServerBuilder builder = NettyServerBuilder.forAddress(
                 new InetSocketAddress(InetAddresses.forString(address), port));
-        for (GrpcServiceDefinition definition : definitions) {
+        for (GrpcServiceDefinition definition: definitions) {
             logger.info("Registered gRPC " + definition.info());
             builder.addService(definition.getDefinition());
         }
@@ -51,18 +42,15 @@ public class DefaultGrpcServerFactory implements GrpcServerFactory {
         return builder.build();
     }
 
-    @Override
-    public void addService(GrpcServiceDefinition definition) {
+    @Override public void addService(GrpcServiceDefinition definition) {
         definitions.add(definition);
     }
 
-    @Override
-    public String getAddress() {
+    @Override public String getAddress() {
         return properties.getAddress();
     }
 
-    @Override
-    public int getPort() {
+    @Override public int getPort() {
         return properties.getPort();
     }
 }

@@ -5,11 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.dimageshare</groupId>
-  <artifactId>service-master</artifactId>
+  <artifactId>master-service</artifactId>
   <version>0.1</version>
   <packaging>jar</packaging>
 
-  <name>service-master</name>
+  <name>master-service</name>
   <description>Demo Service Master Project</description>
 
   <parent>

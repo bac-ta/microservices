@@ -1,3 +1,23 @@
+server:
+  port: ${HTTP_SERVER_PORT:5555}
+  context-path: /api
+
+grpc:
+#  server:
+#    port: ${GRPC_SERVER_PORT:56789}
+  client:
+    channels:
+      user:
+        hosts:
+          - ${GRPC_MASTER_HOST:localhost}
+        ports:
+          - ${GRPC_MASTER_PORT:55593}
+      department:
+        hosts:
+          - ${GRPC_MASTER_HOST:localhost}
+        ports:
+          - ${GRPC_MASTER_PORT:11994}
+
 #Config db
 spring:
   datasource:
@@ -16,27 +36,6 @@ spring:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
 
 max-age: 3000
-server:
-  port: ${HTTP_SERVER_PORT:5555}
-  context-path: /api
-
-grpc:
-  client:
-    channels:
-      user:
-        hosts:
-        - ${GRPC_MASTER_HOST:localhost}
-        ports:
-        - ${GRPC_MASTER_PORT:55993}
-      department:
-        hosts:
-        - ${GRPC_MASTER_HOST:localhost}
-        ports:
-        - ${GRPC_MASTER_PORT:11994}
-
-  server:
-    port: ${GRPC_SERVER_PORT:56789}
-    address: 0.0.0.0
 
 logging:
   level: debug, info

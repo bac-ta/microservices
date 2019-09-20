@@ -1,10 +1,10 @@
 package com.dimageshare.user.service;
 
-import com.dimageshare.protobuf.core.autogen.grpc.user.DepartmentIdRequest;
-import com.dimageshare.protobuf.core.autogen.grpc.user.User;
-import com.dimageshare.protobuf.core.autogen.grpc.user.UserIdRequest;
-import com.dimageshare.protobuf.core.autogen.grpc.user.UserResponses;
-import com.dimageshare.protobuf.core.autogen.grpc.user.UserSaving;
+import com.dimageshare.protobuf.core.autogen.rpc.user.DepartmentIdRequest;
+import com.dimageshare.protobuf.core.autogen.rpc.user.User;
+import com.dimageshare.protobuf.core.autogen.rpc.user.UserIdRequest;
+import com.dimageshare.protobuf.core.autogen.rpc.user.UserResponses;
+import com.dimageshare.protobuf.core.autogen.rpc.user.UserSaving;
 import com.dimageshare.user.entity.UserEntity;
 import com.dimageshare.user.repository.UserRepository;
 import org.slf4j.Logger;

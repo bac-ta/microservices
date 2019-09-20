@@ -1,7 +1,7 @@
 package com.dimageshare.department.entity;
 
-import com.dimageshare.protobuf.core.autogen.grpc.department.Department;
-import com.dimageshare.protobuf.core.autogen.grpc.department.DepartmentSaving;
+import com.dimageshare.protobuf.core.autogen.rpc.department.Department;
+import com.dimageshare.protobuf.core.autogen.rpc.department.DepartmentSaving;
 import lombok.Data;
 
 import javax.persistence.Entity;

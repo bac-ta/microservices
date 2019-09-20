@@ -2,11 +2,11 @@ package com.dimageshare.master.service.department;
 
 import com.dimageshare.master.model.request.DepartmentRequest;
 import com.dimageshare.master.model.response.DepartmentResponse;
-import com.dimageshare.protobuf.core.autogen.grpc.department.Department;
-import com.dimageshare.protobuf.core.autogen.grpc.department.DepartmentIdRequest;
-import com.dimageshare.protobuf.core.autogen.grpc.department.DepartmentResponses;
-import com.dimageshare.protobuf.core.autogen.grpc.department.DepartmentSaving;
-import com.dimageshare.protobuf.core.autogen.grpc.department.DepartmentServiceGrpc;
+import com.dimageshare.protobuf.core.autogen.rpc.department.Department;
+import com.dimageshare.protobuf.core.autogen.rpc.department.DepartmentIdRequest;
+import com.dimageshare.protobuf.core.autogen.rpc.department.DepartmentResponses;
+import com.dimageshare.protobuf.core.autogen.rpc.department.DepartmentSaving;
+import com.dimageshare.protobuf.core.autogen.rpc.department.DepartmentServiceGrpc;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.protobuf.Empty;
 import demo.spring.boot.grpc.client.GrpcClient;
@@ -18,12 +18,12 @@ import java.util.stream.Collectors;
 
 @Service
 public class DepartmentService {
-    @GrpcClient("department")
+    @GrpcClient(value = "department")
     private Channel channel;
     private DepartmentServiceGrpc.DepartmentServiceBlockingStub stub;
 
     @VisibleForTesting
-    protected DepartmentService(Channel channel) {
+    protected DepartmentService(final Channel channel) {
         this.channel = channel;
     }
 
