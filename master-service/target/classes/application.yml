@@ -3,8 +3,8 @@ server:
   context-path: /api
 
 grpc:
-#  server:
-#    port: ${GRPC_SERVER_PORT:56789}
+  server:
+    port: ${GRPC_SERVER_PORT:56789}
   client:
     channels:
       user:

@@ -2,125 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7971166a-a474-43f8-a905-9b9fdf9526ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../department-service/src/main/java/com/dimageshare/department/entity/DepartmentEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../department-service/src/main/java/com/dimageshare/department/entity/DepartmentEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../department-service/src/main/java/com/dimageshare/department/rpc/DepartmentGrpcServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../department-service/src/main/java/com/dimageshare/department/rpc/DepartmentGrpcServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../department-service/src/main/java/com/dimageshare/department/service/DepartmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../department-service/src/main/java/com/dimageshare/department/service/DepartmentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../department-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../department-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../department-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../department-service/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../department-service/target/classes/com/dimageshare/department/entity/DepartmentEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/../department-service/target/classes/com/dimageshare/department/entity/DepartmentEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../department-service/target/classes/com/dimageshare/department/rpc/DepartmentGrpcServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../department-service/target/classes/com/dimageshare/department/rpc/DepartmentGrpcServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../department-service/target/classes/com/dimageshare/department/service/DepartmentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../department-service/target/classes/com/dimageshare/department/service/DepartmentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../grpc-server-starter/src/main/java/demo/spring/boot/grpc/server/DefaultGrpcServerFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../grpc-server-starter/src/main/java/demo/spring/boot/grpc/server/DefaultGrpcServerFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../grpc-server-starter/src/main/java/demo/spring/boot/grpc/server/GrpcServerProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/../grpc-server-starter/src/main/java/demo/spring/boot/grpc/server/GrpcServerProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../grpc-server-starter/target/classes/demo/spring/boot/grpc/server/DefaultGrpcServerFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/../grpc-server-starter/target/classes/demo/spring/boot/grpc/server/DefaultGrpcServerFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../grpc-server-starter/target/classes/demo/spring/boot/grpc/server/GrpcServerProperties$Security.class" beforeDir="false" afterPath="$PROJECT_DIR$/../grpc-server-starter/target/classes/demo/spring/boot/grpc/server/GrpcServerProperties$Security.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../grpc-server-starter/target/classes/demo/spring/boot/grpc/server/GrpcServerProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/../grpc-server-starter/target/classes/demo/spring/boot/grpc/server/GrpcServerProperties.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../master-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../master-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../master-service/src/main/java/com/dimageshare/master/controller/DepartmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../master-service/src/main/java/com/dimageshare/master/controller/DepartmentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../master-service/src/main/java/com/dimageshare/master/service/department/DepartmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../master-service/src/main/java/com/dimageshare/master/service/department/DepartmentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../master-service/src/main/java/com/dimageshare/master/service/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../master-service/src/main/java/com/dimageshare/master/service/user/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../master-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../master-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../master-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../master-service/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../master-service/target/classes/com/dimageshare/master/service/department/DepartmentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../master-service/target/classes/com/dimageshare/master/service/department/DepartmentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/proto/user.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../protobuf/proto/user.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/src/main/java/com/dimageshare/protobuf/core/autogen/grpc/department/Department.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/src/main/java/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentIdRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/src/main/java/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentIdRequestOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/src/main/java/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/src/main/java/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentOuterClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/src/main/java/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentResponses.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/src/main/java/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentResponsesOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/src/main/java/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentSaving.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/src/main/java/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentSavingOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/src/main/java/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentServiceGrpc.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/src/main/java/com/dimageshare/protobuf/core/autogen/grpc/user/DepartmentIdRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/src/main/java/com/dimageshare/protobuf/core/autogen/grpc/user/DepartmentIdRequestOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/src/main/java/com/dimageshare/protobuf/core/autogen/grpc/user/Gender.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/src/main/java/com/dimageshare/protobuf/core/autogen/grpc/user/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/src/main/java/com/dimageshare/protobuf/core/autogen/grpc/user/UserIdRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/src/main/java/com/dimageshare/protobuf/core/autogen/grpc/user/UserIdRequestOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/src/main/java/com/dimageshare/protobuf/core/autogen/grpc/user/UserOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/src/main/java/com/dimageshare/protobuf/core/autogen/grpc/user/UserOuterClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/src/main/java/com/dimageshare/protobuf/core/autogen/grpc/user/UserResponses.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/src/main/java/com/dimageshare/protobuf/core/autogen/grpc/user/UserResponsesOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/src/main/java/com/dimageshare/protobuf/core/autogen/grpc/user/UserSaving.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/src/main/java/com/dimageshare/protobuf/core/autogen/grpc/user/UserSavingOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/src/main/java/com/dimageshare/protobuf/core/autogen/grpc/user/UserServiceGrpc.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/department/Department$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/department/Department$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/department/Department.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentIdRequest$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentIdRequest$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentIdRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentIdRequestOrBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentOrBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentOuterClass$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentOuterClass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentResponses$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentResponses$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentResponses.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentResponsesOrBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentSaving$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentSaving$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentSaving.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentSavingOrBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentServiceGrpc$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentServiceGrpc$DepartmentServiceBaseDescriptorSupplier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentServiceGrpc$DepartmentServiceBlockingStub.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentServiceGrpc$DepartmentServiceFileDescriptorSupplier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentServiceGrpc$DepartmentServiceFutureStub.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentServiceGrpc$DepartmentServiceImplBase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentServiceGrpc$DepartmentServiceMethodDescriptorSupplier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentServiceGrpc$DepartmentServiceStub.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentServiceGrpc$MethodHandlers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/department/DepartmentServiceGrpc.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/DepartmentIdRequest$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/DepartmentIdRequest$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/DepartmentIdRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/DepartmentIdRequestOrBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/Gender$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/Gender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/User$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/User$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/UserIdRequest$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/UserIdRequest$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/UserIdRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/UserIdRequestOrBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/UserOrBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/UserOuterClass$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/UserOuterClass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/UserResponses$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/UserResponses$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/UserResponses.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/UserResponsesOrBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/UserSaving$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/UserSaving$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/UserSaving.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/UserSavingOrBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/UserServiceGrpc$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/UserServiceGrpc$MethodHandlers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/UserServiceGrpc$UserServiceBaseDescriptorSupplier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/UserServiceGrpc$UserServiceBlockingStub.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/UserServiceGrpc$UserServiceFileDescriptorSupplier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/UserServiceGrpc$UserServiceFutureStub.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/UserServiceGrpc$UserServiceImplBase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/UserServiceGrpc$UserServiceMethodDescriptorSupplier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/UserServiceGrpc$UserServiceStub.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../protobuf/target/classes/com/dimageshare/protobuf/core/autogen/grpc/user/UserServiceGrpc.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../master-service/target/classes/com/dimageshare/master/controller/DepartmentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../master-service/target/classes/com/dimageshare/master/controller/DepartmentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../master-service/target/classes/com/dimageshare/master/service/user/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../master-service/target/classes/com/dimageshare/master/service/user/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimageshare/user/UserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimageshare/user/UserServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimageshare/user/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimageshare/user/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimageshare/user/rpc/UserGrpcServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimageshare/user/rpc/UserGrpcServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dimageshare/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dimageshare/user/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dimageshare/user/UserApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dimageshare/user/entity/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dimageshare/user/entity/UserEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dimageshare/user/rpc/UserGrpcServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dimageshare/user/rpc/UserGrpcServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dimageshare/user/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dimageshare/user/service/UserService.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/../protobuf/target/" />
@@ -141,17 +26,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../master-service/src/main/java/com/dimageshare/master/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../protobuf/src/main/java/com/dimageshare/protobuf/core/autogen/rpc/user/UserServiceGrpc.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="398" selection-start-line="398" selection-end-line="398" />
+            <state relative-caret-position="307">
+              <caret line="52" column="34" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -170,20 +46,35 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/io/grpc/grpc-stub/1.10.1/grpc-stub-1.10.1.jar!/io/grpc/stub/ClientCalls.class">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../master-service/src/main/java/com/dimageshare/master/service/user/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-99">
-              <caret line="63" column="38" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
+            <state relative-caret-position="425">
+              <caret line="53" column="41" lean-forward="true" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../master-service/src/main/java/com/dimageshare/master/service/user/UserService.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dimageshare/user/rpc/UserGrpcServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-572">
-              <caret line="55" selection-start-line="55" selection-end-line="55" />
+            <state relative-caret-position="936">
+              <caret line="54" column="60" selection-start-line="54" selection-start-column="60" selection-end-line="54" selection-end-column="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dimageshare/user/rpc/UserGrpcServerConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -194,8 +85,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../master-service/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="162">
+              <caret line="9" column="10" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -203,7 +94,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../master-service/src/main/java/com/dimageshare/master/controller/DepartmentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
+            <state relative-caret-position="558">
               <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
             </state>
           </provider>
@@ -212,12 +103,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../master-service/src/main/java/com/dimageshare/master/service/department/DepartmentService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
+            <state relative-caret-position="831">
               <caret line="60" column="30" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1089#1090#0" expanded="true" />
-                <element signature="e#1127#1128#0" expanded="true" />
                 <element signature="e#1175#1176#0" expanded="true" />
                 <element signature="e#1198#1199#0" expanded="true" />
               </folding>
@@ -237,8 +126,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../master-service/src/main/java/com/dimageshare/master/MasterServiceApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="216">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -267,10 +156,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/dimageshare/user/rpc/UserGrpcServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dimageshare/user/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dimageshare/user/entity/UserEntity.java" />
-        <option value="$PROJECT_DIR$/../master-service/src/main/java/com/dimageshare/master/service/user/UserService.java" />
         <option value="$PROJECT_DIR$/../master-service/src/main/java/com/dimageshare/master/service/department/DepartmentService.java" />
         <option value="$PROJECT_DIR$/../master-service/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/../master-service/src/main/java/com/dimageshare/master/controller/DepartmentController.java" />
+        <option value="$PROJECT_DIR$/../master-service/src/main/java/com/dimageshare/master/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/../master-service/src/main/java/com/dimageshare/master/service/user/UserService.java" />
       </list>
     </option>
   </component>
@@ -304,19 +194,129 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="user-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="master-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="user-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="master-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="user-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="master-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="user-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="master-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="user-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="master-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="master" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="user-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="master-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="master" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="user-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="master-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="master" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="user-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="master-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="master" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="department" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="user-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="master-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="master" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="user-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="master-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="user-service" type="b2602c69:ProjectViewProjectNode" />
               <item name="user-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="user-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="user-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="user-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="user-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="user-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="rpc" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -328,8 +328,8 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568955131876" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Grpc/service-master/pom.xml" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1568955896669" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -356,7 +356,7 @@
     </option>
     <option name="contentProportion" value="0.17911285" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
     <configuration name="DepartmentServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="department-service" />
       <extension name="coverage">
@@ -399,8 +399,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.MasterServiceApplication" />
-        <item itemvalue="Spring Boot.DepartmentServiceApplication" />
         <item itemvalue="Spring Boot.UserServiceApplication" />
+        <item itemvalue="Spring Boot.DepartmentServiceApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -418,18 +418,19 @@
       <workItem from="1568951696741" duration="89000" />
       <workItem from="1568951905249" duration="483000" />
       <workItem from="1568952417686" duration="92000" />
-      <workItem from="1568952628681" duration="2443000" />
+      <workItem from="1568952628681" duration="2864000" />
+      <workItem from="1568955646800" duration="250000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4483000" />
+    <option name="totallyTimeSpent" value="5154000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
+    <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28524047" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28524047" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -452,7 +453,7 @@
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.3291536" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.3291536" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="15" visible="true" weight="0.6050157" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" visible="true" weight="0.4075235" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -469,13 +470,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dimageshare/user/rpc/UserGrpcServerConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dimageshare/user/message/ErrorMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -575,13 +569,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../protobuf/src/main/java/com/dimageshare/protobuf/core/autogen/grpc/user/UserServiceGrpc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="398" selection-start-line="398" selection-end-line="398" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../protobuf/src/main/java/com/dimageshare/protobuf/core/autogen/grpc/user/UserServiceGrpc.java" />
     <entry file="file://$PROJECT_DIR$/../protobuf/proto/user.proto">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -640,16 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-52">
           <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dimageshare/user/rpc/UserGrpcServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -778,15 +756,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../master-service/src/main/java/com/dimageshare/master/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../master-service/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="307">
+          <caret line="52" column="34" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -802,6 +773,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dimageshare/user/rpc/UserGrpcServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="936">
+          <caret line="54" column="60" selection-start-line="54" selection-start-column="60" selection-end-line="54" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../master-service/src/main/java/com/dimageshare/master/controller/DepartmentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../master-service/src/main/java/com/dimageshare/master/service/department/DepartmentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="831">
+          <caret line="60" column="30" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1175#1176#0" expanded="true" />
+            <element signature="e#1198#1199#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../master-service/src/main/java/com/dimageshare/master/MasterServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../master-service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dimageshare/user/UserServiceApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -809,38 +823,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../master-service/src/main/java/com/dimageshare/master/MasterServiceApplication.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dimageshare/user/rpc/UserGrpcServerConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../master-service/src/main/java/com/dimageshare/master/controller/DepartmentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../master-service/src/main/java/com/dimageshare/master/service/department/DepartmentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="60" column="30" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="30" />
+        <state relative-caret-position="180">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1089#1090#0" expanded="true" />
-            <element signature="e#1127#1128#0" expanded="true" />
-            <element signature="e#1175#1176#0" expanded="true" />
-            <element signature="e#1198#1199#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../master-service/src/main/java/com/dimageshare/master/service/user/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-572">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
+        <state relative-caret-position="425">
+          <caret line="53" column="41" lean-forward="true" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
