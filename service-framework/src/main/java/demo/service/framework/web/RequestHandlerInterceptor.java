@@ -23,7 +23,7 @@ public class RequestHandlerInterceptor extends HandlerInterceptorAdapter {
                 "", Lists.newArrayList(), false, Sets.newHashSet(), Sets.newHashSet(),
                 "", Sets.newHashSet(), Maps.newHashMap());
 
-        Authentication token = new UsernamePasswordAuthenticationToken("department", "N/A", Collections.emptyList());
+        Authentication token = new UsernamePasswordAuthenticationToken("user", "N/A", Collections.emptyList());
         OAuth2Authentication authentication = new OAuth2Authentication(req, token);
 
         SecurityContext context = SecurityContextHolder.getContext();

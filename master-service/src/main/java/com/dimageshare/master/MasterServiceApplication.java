@@ -6,11 +6,9 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan(basePackages = {"com.dimageshare.master", "com.dimageshare.master.service"})
-
 public class MasterServiceApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(MasterServiceApplication.class, args);
     }
-
 }

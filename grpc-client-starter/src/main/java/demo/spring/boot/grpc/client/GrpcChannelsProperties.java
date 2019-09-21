@@ -6,7 +6,7 @@ import org.springframework.boot.context.properties.NestedConfigurationProperty;
 
 import java.util.Map;
 
-@ConfigurationProperties("rpc.client")
+@ConfigurationProperties("grpc.client")
 public class GrpcChannelsProperties {
 
     @NestedConfigurationProperty

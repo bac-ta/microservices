@@ -30,7 +30,7 @@ public class GrpcHeaderClientInterceptor implements ClientInterceptor {
                 String loginInfo = GrpcGlobals.LOGIN_INFO.get(Context.current());
 
                 if (loginInfo == null) {
-                    loginInfo = "department";
+                    loginInfo = "user";
                 }
 
                 RequestInfo requestInfo = GrpcGlobals.REQUEST_INFO.get(Context.current());

@@ -18,7 +18,7 @@ public class MockHeaderServerInterceptor implements ServerInterceptor {
     // Constructors
     // ------------------------------------------------------------------------
     public MockHeaderServerInterceptor() {
-        this.loginInfo = "department";
+        this.loginInfo = "user";
     }
 
     // Overrided methods

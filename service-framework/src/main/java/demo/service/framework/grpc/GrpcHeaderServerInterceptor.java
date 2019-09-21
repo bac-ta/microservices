@@ -28,7 +28,7 @@ public class GrpcHeaderServerInterceptor implements ServerInterceptor {
         if (requestInfo != null) {
             context = context.withValue(GrpcGlobals.REQUEST_INFO, requestInfo);
         }
-        String loginInfo = "department";
+        String loginInfo = "user";
         context = context.withValue(GrpcGlobals.LOGIN_INFO, loginInfo);
 
         if (requestInfo != null) {

@@ -42,9 +42,10 @@ public class DepartmentController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-    @PutMapping(value = "/user/saveDepartment")
+    @PutMapping(value = "/department/saveDepartment")
     public ResponseEntity<Void> saveDepartment(@RequestBody DepartmentRequest request) {
         service.saveDepartment(request);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+
 }

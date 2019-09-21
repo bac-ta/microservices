@@ -1,9 +1,13 @@
 syntax = "proto3";
 
-package user;
 import "google/protobuf/empty.proto";
-option java_package = "com.dimageshare.protobuf.core.autogen.rpc.user";
+import "google/protobuf/timestamp.proto";
+option java_package = "com.dimageshare.core.autogen.grpc.user";
 option java_multiple_files = true;
+
+package user;
+// =================
+
 
 message User {
     int32 id = 1;
@@ -42,6 +46,7 @@ message UserResponses {
 message DepartmentIdRequest {
     int32 departmentId = 1;
 }
+
 service UserService {
     rpc findUsers (google.protobuf.Empty) returns (UserResponses);
     rpc findUserById (UserIdRequest) returns (User);

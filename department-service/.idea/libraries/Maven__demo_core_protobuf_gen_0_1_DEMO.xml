@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: demo.core:protobuf-gen:0.1.DEMO">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/demo/core/protobuf-gen/0.1.DEMO/protobuf-gen-0.1.DEMO.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/demo/core/protobuf-gen/0.1.DEMO/protobuf-gen-0.1.DEMO-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/demo/core/protobuf-gen/0.1.DEMO/protobuf-gen-0.1.DEMO-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

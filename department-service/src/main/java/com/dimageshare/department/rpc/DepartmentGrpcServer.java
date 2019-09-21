@@ -1,18 +1,20 @@
 package com.dimageshare.department.rpc;
 
-import com.dimageshare.department.service.DepartmentService;
-import com.dimageshare.protobuf.core.autogen.rpc.department.Department;
-import com.dimageshare.protobuf.core.autogen.rpc.department.DepartmentIdRequest;
-import com.dimageshare.protobuf.core.autogen.rpc.department.DepartmentResponses;
-import com.dimageshare.protobuf.core.autogen.rpc.department.DepartmentSaving;
-import com.dimageshare.protobuf.core.autogen.rpc.department.DepartmentServiceGrpc;
+import com.dimageshare.core.autogen.grpc.department.Department;
+import com.dimageshare.core.autogen.grpc.department.DepartmentIdRequest;
+import com.dimageshare.core.autogen.grpc.department.DepartmentResponses;
+import com.dimageshare.core.autogen.grpc.department.DepartmentSaving;
+import com.dimageshare.core.autogen.grpc.department.DepartmentServiceGrpc;
 import com.google.protobuf.Empty;
-import demo.spring.boot.grpc.server.GrpcService;
 import io.grpc.stub.StreamObserver;
+
+import com.dimageshare.department.service.DepartmentService;
+import demo.spring.boot.grpc.server.GrpcService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @GrpcService(value = DepartmentServiceGrpc.class)
 public class DepartmentGrpcServer extends DepartmentServiceGrpc.DepartmentServiceImplBase {
+
     private DepartmentService service;
 
     @Autowired

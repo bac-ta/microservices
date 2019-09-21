@@ -1,14 +1,14 @@
 package com.dimageshare.master.service.user;
 
+import com.dimageshare.core.autogen.grpc.user.DepartmentIdRequest;
+import com.dimageshare.core.autogen.grpc.user.Gender;
+import com.dimageshare.core.autogen.grpc.user.User;
+import com.dimageshare.core.autogen.grpc.user.UserIdRequest;
+import com.dimageshare.core.autogen.grpc.user.UserResponses;
+import com.dimageshare.core.autogen.grpc.user.UserSaving;
+import com.dimageshare.core.autogen.grpc.user.UserServiceGrpc;
 import com.dimageshare.master.model.request.UserRequest;
 import com.dimageshare.master.model.response.UserResponse;
-import com.dimageshare.protobuf.core.autogen.rpc.user.DepartmentIdRequest;
-import com.dimageshare.protobuf.core.autogen.rpc.user.Gender;
-import com.dimageshare.protobuf.core.autogen.rpc.user.User;
-import com.dimageshare.protobuf.core.autogen.rpc.user.UserIdRequest;
-import com.dimageshare.protobuf.core.autogen.rpc.user.UserResponses;
-import com.dimageshare.protobuf.core.autogen.rpc.user.UserSaving;
-import com.dimageshare.protobuf.core.autogen.rpc.user.UserServiceGrpc;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.protobuf.Empty;
 import demo.spring.boot.grpc.client.GrpcClient;

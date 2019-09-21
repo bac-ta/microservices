@@ -38,8 +38,7 @@ public class GrpcServerProperties {
         }
     }
 
-    //Defaut port and address
-    private int port = 50000;
+    private int port = 50051;
 
     private String address = "0.0.0.0";
 
