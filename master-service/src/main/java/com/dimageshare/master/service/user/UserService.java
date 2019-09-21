@@ -1,14 +1,17 @@
 package com.dimageshare.master.service.user;
 
-import com.dimageshare.configuration.interceptor.GrpcClient;
+import com.dimageshare.core.autogen.grpc.user.DepartmentIdRequest;
+import com.dimageshare.core.autogen.grpc.user.Gender;
+import com.dimageshare.core.autogen.grpc.user.User;
+import com.dimageshare.core.autogen.grpc.user.UserIdRequest;
+import com.dimageshare.core.autogen.grpc.user.UserResponses;
+import com.dimageshare.core.autogen.grpc.user.UserSaving;
+import com.dimageshare.core.autogen.grpc.user.UserServiceGrpc;
+import com.dimageshare.master.model.request.UserRequest;
 import com.dimageshare.master.model.response.UserResponse;
-import com.dimageshare.protobuf.core.autogen.grpc.user.DepartmentIdRequest;
-import com.dimageshare.protobuf.core.autogen.grpc.user.User;
-import com.dimageshare.protobuf.core.autogen.grpc.user.UserIdRequest;
-import com.dimageshare.protobuf.core.autogen.grpc.user.UserResponses;
-import com.dimageshare.protobuf.core.autogen.grpc.user.UserServiceGrpc;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.protobuf.Empty;
+import demo.spring.boot.grpc.client.GrpcClient;
 import io.grpc.Channel;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +20,7 @@ import java.util.stream.Collectors;
 
 @Service
 public class UserService {
-    @GrpcClient("user")
+    @GrpcClient(value = "user")
     private Channel channel;
     private UserServiceGrpc.UserServiceBlockingStub stub;
 
@@ -30,7 +33,7 @@ public class UserService {
         super();
     }
 
-    public UserServiceGrpc.UserServiceBlockingStub getStub() {
+    private UserServiceGrpc.UserServiceBlockingStub getStub() {
         return UserServiceGrpc.newBlockingStub(channel);
     }
 
@@ -45,8 +48,7 @@ public class UserService {
         String phoneNumber = user.getPhoneNumber();
         int departmentId = user.getDepartmentId();
 
-        UserResponse response = new UserResponse(id, name, gender, email, age, phoneNumber, departmentId);
-        return response;
+        return new UserResponse(id, name, gender, email, age, phoneNumber, departmentId);
     }
 
     public List<UserResponse> findAll() {
@@ -90,6 +92,29 @@ public class UserService {
         stub = getStub();
         UserIdRequest request = UserIdRequest.newBuilder().setId(id).build();
         stub.removeUserById(request);
+    }
+
+    public void saveUser(UserRequest request) {
+        String name = request.getName();
+        String email = request.getEmail();
+        Integer age = request.getAge();
+
+        if (age == null)
+            age = 0;
+
+        else if (age < 0)
+            throw new IllegalArgumentException("parameter 'age' invalid");
+
+        Integer genderNum = request.getGender();
+        Gender gender = Gender.forNumber(genderNum);
+        String phoneNumber = request.getPhoneNumber();
+        int departmentId = request.getDepartmentId();
+
+        UserSaving user = UserSaving.newBuilder().setName(name).setEmail(email).setAge(age).setGender(gender)
+                .setPhoneNumber(phoneNumber).setDepartmentId(departmentId).build();
+
+        stub.saveUser(user);
+
     }
 
 }

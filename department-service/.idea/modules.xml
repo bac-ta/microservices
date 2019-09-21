@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/department-service.iml" filepath="$PROJECT_DIR$/.idea/department-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../grpc-client-starter/grpc-client-starter.iml" filepath="$PROJECT_DIR$/../grpc-client-starter/grpc-client-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../grpc-server-starter/grpc-server-starter.iml" filepath="$PROJECT_DIR$/../grpc-server-starter/grpc-server-starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../master-service/master-service.iml" filepath="$PROJECT_DIR$/../master-service/master-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../protobuf/protobuf-gen.iml" filepath="$PROJECT_DIR$/../protobuf/protobuf-gen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../service-framework/service-framework.iml" filepath="$PROJECT_DIR$/../service-framework/service-framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../user-service/user-service.iml" filepath="$PROJECT_DIR$/../user-service/user-service.iml" />
+    </modules>
+  </component>
+</project>

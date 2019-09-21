@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+option java_package = "com.dimageshare.core.autogen.grpc.department";
+option java_multiple_files = true;
+
+package department;
+// =================
+
+
+message Department {
+    int32 dpId = 1;
+    string dpName = 2;
+    string dpDescription = 3;
+}
+
+message DepartmentSaving {
+    string dpName = 1;
+    string dpDescription = 2;
+}
+
+message DepartmentIdRequest {
+    int32 dpId = 1;
+}
+
+message DepartmentResponses {
+    repeated Department department = 1;
+}
+
+service DepartmentService {
+    rpc findDepartments (google.protobuf.Empty) returns (DepartmentResponses);
+    rpc findDepartmentById (DepartmentIdRequest) returns (Department);
+    rpc saveDepartment (DepartmentSaving) returns (google.protobuf.Empty);
+    rpc removeDepartmentById (DepartmentIdRequest) returns (google.protobuf.Empty);
+}

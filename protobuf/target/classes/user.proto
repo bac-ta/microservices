@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+option java_package = "com.dimageshare.core.autogen.grpc.user";
+option java_multiple_files = true;
+
+package user;
+// =================
+
+
+message User {
+    int32 id = 1;
+    string name = 2;
+    Gender gender = 3;
+    string email = 4;
+    int32 age = 5;
+    string phoneNumber = 6;
+    int32 departmentId = 7;
+}
+
+message UserSaving {
+    string name = 1;
+    Gender gender = 2;
+    string email = 3;
+    int32 age = 4;
+    string phoneNumber = 5;
+    int32 departmentId = 6;
+}
+
+enum Gender {
+    MALE = 0;
+    FEMALE = 1;
+    OTHER = 2;
+}
+
+message UserIdRequest {
+    int32 id = 1;
+}
+
+
+message UserResponses {
+    repeated User user = 1;
+}
+
+message DepartmentIdRequest {
+    int32 departmentId = 1;
+}
+
+service UserService {
+    rpc findUsers (google.protobuf.Empty) returns (UserResponses);
+    rpc findUserById (UserIdRequest) returns (User);
+    rpc findUserByDepartmentId (DepartmentIdRequest) returns (UserResponses);
+    rpc saveUser (UserSaving) returns (google.protobuf.Empty);
+    rpc removeUserById (UserIdRequest) returns (google.protobuf.Empty);
+}

@@ -1,9 +1,15 @@
 package com.dimageshare.department.entity;
 
-import com.dimageshare.protobuf.core.autogen.grpc.department.Department;
+import com.dimageshare.core.autogen.grpc.department.Department;
+import com.dimageshare.core.autogen.grpc.department.DepartmentSaving;
 import lombok.Data;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Data
@@ -11,22 +17,24 @@ import javax.persistence.*;
 public class DepartmentEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private Integer id;
+    @Column
     private String name;
+    @Column
     private String description;
 
     public Department initDepartment(DepartmentEntity entity) {
         return Department.newBuilder().
-                setId(entity.getId()).
-                setName(entity.getName()).
-                setDescription(entity.getDescription()).
+                setDpId(entity.getId()).
+                setDpName(entity.getName()).
+                setDpDescription(entity.getDescription()).
                 build();
 
     }
 
-    public DepartmentEntity(Department department) {
-        this.id = department.getId();
-        this.name = department.getName();
-        this.description = department.getDescription();
+    public DepartmentEntity(DepartmentSaving department) {
+        this.name = department.getDpName();
+        this.description = department.getDpDescription();
     }
 }

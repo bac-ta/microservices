@@ -8,10 +8,6 @@ public class DepartmentResponse {
     private String name;
     private String description;
 
-    public DepartmentResponse() {
-        super();
-    }
-
     public DepartmentResponse(int id, String name, String description) {
         this.id = id;
         this.name = name;
