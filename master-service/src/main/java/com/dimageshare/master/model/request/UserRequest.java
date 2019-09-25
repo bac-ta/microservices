@@ -1,5 +1,6 @@
 package com.dimageshare.master.model.request;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 import javax.validation.Valid;
@@ -15,7 +16,9 @@ public class UserRequest {
     @Valid
     private Integer age;
     @NotBlank
+    @JsonProperty("phone_number")
     private String phoneNumber;
     @NotBlank
+    @JsonProperty("department_id")
     private Integer departmentId;
 }

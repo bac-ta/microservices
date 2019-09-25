@@ -24,6 +24,10 @@ public class DepartmentEntity {
     @Column
     private String description;
 
+    public DepartmentEntity() {
+        super();
+    }
+
     public Department initDepartment(DepartmentEntity entity) {
         return Department.newBuilder().
                 setDpId(entity.getId()).

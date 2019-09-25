@@ -33,6 +33,7 @@ public class DepartmentService {
 
     public DepartmentResponses findAllDepartments() {
         List<DepartmentEntity> entities = departmentRepository.findAll();
+        System.out.println(entities);
         if (entities.isEmpty())
             return DepartmentResponses.getDefaultInstance();
 
