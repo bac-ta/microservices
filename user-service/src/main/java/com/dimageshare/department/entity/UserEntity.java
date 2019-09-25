@@ -44,6 +44,10 @@ public class UserEntity {
     @Column(name = "department_id")
     private Integer departmentId;
 
+    public User() {
+        super();
+    }
+
     /**
      * Map UserEntity to User
      */
