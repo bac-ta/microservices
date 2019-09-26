@@ -95,6 +95,7 @@ public class UserService {
     }
 
     public void saveUser(UserRequest request) {
+        stub = getStub();
         String name = request.getName();
         String email = request.getEmail();
         Integer age = request.getAge();
