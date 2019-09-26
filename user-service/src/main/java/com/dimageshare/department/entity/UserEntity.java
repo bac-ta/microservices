@@ -44,7 +44,7 @@ public class UserEntity {
     @Column(name = "department_id")
     private Integer departmentId;
 
-    public User() {
+    public UserEntity() {
         super();
     }
 
