@@ -1,0 +1,54 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+
+package user;
+// =================
+
+
+message User {
+    int32 id = 1;
+    string name = 2;
+    Gender gender = 3;
+    string email = 4;
+    int32 age = 5;
+    string phone_number = 6;
+    int32 department_id = 7;
+}
+
+message UserSaving {
+    string name = 1;
+    Gender gender = 2;
+    string email = 3;
+    int32 age = 4;
+    string phone_number = 5;
+    int32 department_id = 6;
+}
+
+enum Gender {
+    MALE = 0;
+    FEMALE = 1;
+    OTHER = 2;
+}
+
+message UserIdRequest {
+    int32 id = 1;
+}
+
+
+message UserResponses {
+    repeated User user = 1;
+}
+
+message DepartmentIdRequest {
+    int32 department_id = 1;
+}
+
+service UserService {
+    rpc find_users (google.protobuf.Empty) returns (UserResponses);
+    rpc find_user_by_id (UserIdRequest) returns (User);
+    rpc find_user_by_department_id (DepartmentIdRequest) returns (UserResponses);
+    rpc save_user (UserSaving) returns (google.protobuf.Empty);
+    rpc remove_user_by_id (UserIdRequest) returns (google.protobuf.Empty);
+}

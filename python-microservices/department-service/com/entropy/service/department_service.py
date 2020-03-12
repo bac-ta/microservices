@@ -1,0 +1,2 @@
+class DepartmentService(object):
+    pass
