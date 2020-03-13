@@ -1,0 +1,8 @@
+grpc:
+  server:
+    port: 55593
+    host: localhost
+
+mysql:
+  port: 8080
+  host: localhost

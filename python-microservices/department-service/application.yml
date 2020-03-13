@@ -1,0 +1,7 @@
+grpc:
+  server:
+    port: 11994
+    host: localhost
+mysql:
+  host: localhost
+  port: 3306
