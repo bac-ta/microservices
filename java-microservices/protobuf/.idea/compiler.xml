@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="service-framework" />
+        <module name="master-service" />
+        <module name="grpc-server-starter" />
+        <module name="grpc-client-starter" />
+        <module name="user-service" />
+        <module name="department-service" />
+        <module name="protobuf" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="department-service" target="1.8" />
+      <module name="grpc-client-starter" target="1.8" />
+      <module name="grpc-server-starter" target="1.8" />
+      <module name="master-service" target="1.8" />
+      <module name="protobuf" target="1.8" />
+      <module name="service-framework" target="1.8" />
+      <module name="user-service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
